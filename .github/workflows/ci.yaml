@@ -55,4 +55,4 @@ jobs:
           distribution: 'adopt'
 
       - name: Run CI
-        run: mvn --batch-mode clean verify package
+        run: mvn -Dtests.dbunit.connection.url="jdbc:mariadb://127.0.0.1:3306" -Dtests.dbunit.username="testuser" -Dtests.dbunit.password="testpass" --batch-mode clean verify package
