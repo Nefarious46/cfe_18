@@ -39,6 +39,7 @@ jobs:
           mysql -u root -h127.0.0.1 -p'root' -P${MARIADB_PORT} <<< "grant all privileges on cfe_00.* to testuser@'%' identified by 'testpass';"
           mysql -u root -h127.0.0.1 -p'root' -P${MARIADB_PORT} <<< "grant all privileges on flow.* to testuser@'%' identified by 'testpass';"
           mysql -u root -h127.0.0.1 -p'root' -P${MARIADB_PORT} <<< "grant all privileges on location.* to testuser@'%' identified by 'testpass';"
+          mysql -u root -h127.0.0.1 -p'root' -P${MARIADB_PORT} <<< "grant all privileges on mysql.transaction_registry to testuser@'%' identified by 'testpass';"
           echo "Flushing privileges"
           mysql -u root -h127.0.0.1 -p'root' -P${MARIADB_PORT} <<< "flush privileges;"
 
@@ -55,4 +56,4 @@ jobs:
           distribution: 'adopt'
 
       - name: Run CI
-        run: mvn -Dtests.dbunit.connection.url="jdbc:mariadb://127.0.0.1:3306" -Dtests.dbunit.username="testuser" -Dtests.dbunit.password="testpass" --batch-mode clean verify package
+        run: mvn --batch-mode clean verify package
