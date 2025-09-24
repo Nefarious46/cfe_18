@@ -48,6 +48,43 @@ package com.teragrep.cfe18.handlers.entities;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+/**
+ * @Class CaptureGroup
+ * @Brief POJO class which forms Capture Group object.
+ *
+ *
+ * @Responsibilities
+ *     - can get/set Tag
+ *     - can get/set Capture definition group name
+ *     - can get/set Capture definition Id
+ *     - can get/set Id
+ *     - can get/set Capture group type
+ *
+ * @startuml
+ * Class CaptureGroup {
+ *     - getTag()
+ *     - setTag()
+ *     - getCapture_def_group_name()
+ *     - setCapture_def_group_name()
+ *     - getCapture_definition_id()
+ *     - setCapture_definition_id()
+ *     - getId()
+ *     - setId()
+ *     - getCapture_group_type()
+ *     - setCapture_group_type()
+ * }
+ *
+ * note right of CaptureGroup
+ * Responsibilities:
+ *     - can get/set Tag
+ *     - can get/set Capture definition group name
+ *     - can get/set Capture definition Id
+ *     - can get/set Id
+ *     - can get/set Capture group type
+ *
+ * end note
+ * @enduml
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CaptureGroup {
     public enum group_type {

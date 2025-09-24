@@ -48,6 +48,58 @@ package com.teragrep.cfe18.handlers.entities;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+/**
+ * @Class CaptureRelp
+ * @Brief POJO class which forms CaptureRelp object
+ *
+ * @Responsibilities
+ * - set id
+ * - set tag
+ * - set application
+ * - set index
+ * - set retentionTime
+ * - set sourceType
+ * - set category
+ * - set flow
+ * - set protocol
+ * - set type
+ * - get id
+ * - get tag
+ * - get application
+ * - get index
+ * - get retentionTime
+ * - get sourceType
+ * - get category
+ * - get flow
+ * - get protocol
+ * - get type
+ *
+ * @startuml
+ * class CaptureRelp {
+ *     setId()
+ *     getId()
+ *     setTag()
+ *     getTag()
+ *     setApplication()
+ *     getApplication()
+ *     setIndex()
+ *     getIndex()
+ *     setRetentionTime()
+ *     getRetentionTime()
+ *     setSourceType()
+ *     getSourceType()
+ *     setCategory()
+ *     getCategory()
+ *     setFlow()
+ *     getFlow()
+ *     setProtocol()
+ *     getProtocol()
+ *     setType()
+ *     getType()
+ * }
+ *
+ * @enduml  
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CaptureRelp {
     public enum CaptureType {
