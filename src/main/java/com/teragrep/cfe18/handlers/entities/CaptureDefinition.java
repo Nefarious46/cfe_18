@@ -45,6 +45,40 @@
  */
 package com.teragrep.cfe18.handlers.entities;
 
+/**
+ * @class CaptureDefinition
+ * @brief POJO class which forms CaptureDefinition object
+ *
+ * @responsibilities
+ * - Set Id
+ * - Get Id
+ * - Set Tag
+ * - Get Tag
+ * - Set Sourcetype
+ * - Get Sourcetype
+ * - Set Application
+ * - Get Application
+ * - Set CaptureIndex
+ * - Get CaptureIndex
+ *
+ *
+ * @startuml
+ * class CaptureDefinition{
+ *     setId()
+ *     getId()
+ *     setTag()
+ *     getTag()
+ *     setSourcetype()
+ *     getSourcetype()
+ *     setApplication()
+ *     getApplication()
+ *     setCaptureIndex()
+ *     getCaptureIndex()
+ * }
+ *
+ * @enduml
+ */
+
 public final class CaptureDefinition {
     private int id;
     private String tag;
