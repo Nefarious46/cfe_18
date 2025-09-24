@@ -90,7 +90,7 @@ import java.util.List;
  *
  * FlowController --> Flow : Flowyness
  *
- * note right of the FlowController
+ * note right of FlowController
  * Responsibilities:
  * - Can retrieve multiple flows
  * - Can create new Flow
