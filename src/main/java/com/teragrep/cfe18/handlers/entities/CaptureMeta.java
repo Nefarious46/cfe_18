@@ -45,6 +45,31 @@
  */
 package com.teragrep.cfe18.handlers.entities;
 
+
+/**
+ * @class CaptureMeta
+ * @brief POJO class which forms CaptureMeta object. Can be used as key value storage for additional information for Capture.
+ *
+ * @responsibilities
+ * - Set Capture Id
+ * - Get Capture Id
+ * - Set Capture meta key
+ * - Get Capture meta key
+ * - Set Capture meta value
+ * - Get Capture meta value
+ *
+ * @startuml
+ * class CaptureDefinition{
+ *     setCaptureId()
+ *     getCaptureId()
+ *     setCaptureMetaKey()
+ *     getCaptureMetaKey()
+ *     setCaptureMetaValue()
+ *     getCaptureMetaValue()
+ * }
+ *
+ * @enduml
+ */
 public class CaptureMeta {
 
     public int capture_id;
