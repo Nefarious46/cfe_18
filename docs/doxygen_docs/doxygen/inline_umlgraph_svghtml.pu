@@ -40,6 +40,20 @@ Responsibilities:
 end note
 @enduml
 @startuml inline_umlgraph_3.svg
+class CaptureDefinition{
+    setId()
+    getId()
+    setTag()
+    getTag()
+    setSourcetype()
+    getSourcetype()
+    setApplication()
+    getApplication()
+    setCaptureIndex()
+    getCaptureIndex()
+}
+@enduml
+@startuml inline_umlgraph_4.svg
 class CaptureFile {
 - getId()
 - setId()
@@ -87,7 +101,27 @@ Responsibilities:
 
 end note
 @enduml
-@startuml inline_umlgraph_4.svg
+@startuml inline_umlgraph_5.svg
+class CaptureDefinition{
+    setCaptureId()
+    getCaptureId()
+    setCaptureMetaKey()
+    getCaptureMetaKey()
+    setCaptureMetaValue()
+    getCaptureMetaValue()
+}
+@enduml
+@startuml inline_umlgraph_6.svg
+class CaptureDefinition{
+    setStorageId()
+    getStorageId()
+    setCaptureId()
+    getCaptureId()
+    setStorageName()
+    getStorageName()
+}
+@enduml
+@startuml inline_umlgraph_7.svg
 class Flow{
     setName()
     getName()
