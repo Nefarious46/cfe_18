@@ -49,10 +49,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @Class CaptureRelp
- * @Brief POJO class which forms CaptureRelp object
+ * @class CaptureRelp
+ * @brief POJO class which forms CaptureRelp object
  *
- * @Responsibilities
+ * @responsibilities
  * - set id
  * - set tag
  * - set application
@@ -98,7 +98,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
  *     getType()
  * }
  *
- * @enduml  
+ * @enduml
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CaptureRelp {

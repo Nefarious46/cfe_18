@@ -49,11 +49,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @Class CaptureGroup
- * @Brief POJO class which forms Capture Group object.
+ * @class CaptureGroup
+ * @brief POJO class which forms Capture Group object.
  *
  *
- * @Responsibilities
+ * @responsibilities
  *     - can get/set Tag
  *     - can get/set Capture definition group name
  *     - can get/set Capture definition Id

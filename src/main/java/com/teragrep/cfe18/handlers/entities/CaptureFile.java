@@ -49,8 +49,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @Class CaptureFile
- * @Brief POJO class which forms Capture File object.
+ * @class CaptureFile
+ * @brief POJO class which forms Capture File object.
  *
  * @responsibilities
  * - Set/get id
