@@ -74,9 +74,9 @@ import java.util.List;
  * @Brief Controller class for Flow
  *
  * @resbonsibilities
- * - Can retrieve multiple flows
+ * - Can retrieve multiple Flows
  * - Can create new Flow
- * - Can delete one flow
+ * - Can delete one Flow
  *
  * @collaborators
  * - Flow
@@ -92,9 +92,9 @@ import java.util.List;
  *
  * note right of FlowController
  * Responsibilities:
- * - Can retrieve multiple flows
+ * - Can retrieve multiple Flows
  * - Can create new Flow
- * - Can delete one flow
+ * - Can delete one Flow
  *
  *  Collaborators:
  *  - Flow
