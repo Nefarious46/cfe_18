@@ -48,6 +48,31 @@ package com.teragrep.cfe18.handlers.entities;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+/**
+ * @class CaptureStorage
+ * @brief POJO class which forms CaptureStorage object. Links Capture to Flow Storage.
+ *
+ * @responsibilities
+ * - Set Storage Id
+ * - Get Storage Id
+ * - Set Capture Id
+ * - Get Capture Id
+ * - Set Storage Name
+ * - Get Storage Name
+ *
+ * @startuml
+ * class CaptureDefinition{
+ *     setStorageId()
+ *     getStorageId()
+ *     setCaptureId()
+ *     getCaptureId()
+ *     setStorageName()
+ *     getStorageName()
+ * }
+ *
+ * @enduml
+ */
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CaptureStorage {
     private int storage_id;
