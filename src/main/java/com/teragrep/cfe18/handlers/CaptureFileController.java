@@ -70,6 +70,43 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * @Class CaptureFileController
+ * @Brief Controller class for capture files
+ *
+ * @responsibilities
+ *  - Create CaptureFile
+ *  - Get CaptureFile
+ *  - Get All CaptureFiles
+ *  - Delete CaptureFile
+ *
+ * @collaborators
+ * - CaptureFile
+ *
+ * @startuml
+ * class CaptureFileController {
+ *  create()
+ *  get()
+ *  getAll()
+ *  delete()
+ * }
+ *
+ * CaptureFileController --> CaptureFile : Utilizes
+ *
+ * note right of CaptureFileController
+ * Responsibilities:
+ *  - Create CaptureFile
+ *  - Get CaptureFile
+ *  - Get All CaptureFiles
+ *  - Delete CaptureFile
+ *
+ * Collaborators:
+ * - CaptureFile
+ *
+ * end note
+ * @enduml
+ */
+
 @RestController
 @RequestMapping(path = "/capture/file")
 @SecurityRequirement(name = "api")
