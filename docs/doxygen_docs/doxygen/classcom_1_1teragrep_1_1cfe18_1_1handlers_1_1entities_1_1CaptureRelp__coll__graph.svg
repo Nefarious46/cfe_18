@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="@Class CaptureRelp @Brief POJO class which forms CaptureRelp object">
+<g id="a_Node000001"><a xlink:title="POJO class which forms CaptureRelp object.">
 <polygon fill="#999999" stroke="#666666" points="200,-30 0,-30 0,0 200,0 200,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.teragrep.cfe18.handlers.entities.</text>
 <text text-anchor="middle" x="100" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">CaptureRelp</text>
