@@ -71,17 +71,19 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @Class CaptureFileController
- * @Brief Controller class for capture files
+ * @class CaptureFileController
+ * @brief Controller class for capture files
  *
  * @responsibilities
- *  - Create CaptureFile
- *  - Get CaptureFile
- *  - Get All CaptureFiles
- *  - Delete CaptureFile
+ *  - Provides endpoints for CaptureFile
+ *  - Create CaptureFile from request
+ *  - Get CaptureFile from request
+ *  - Get All CaptureFiles from request
+ *  - Delete CaptureFile from request
  *
  * @collaborators
  * - CaptureFile
+ * - CaptureFileMapper
  *
  * @startuml
  * class CaptureFileController {
@@ -92,16 +94,19 @@ import java.util.List;
  * }
  *
  * CaptureFileController --> CaptureFile : Utilizes
+ * CaptureFileController --> CaptureFileMapper : Calls for
  *
  * note right of CaptureFileController
  * Responsibilities:
- *  - Create CaptureFile
- *  - Get CaptureFile
- *  - Get All CaptureFiles
- *  - Delete CaptureFile
+ *  - Provides endpoints for CaptureFile
+ *  - Create CaptureFile from request
+ *  - Get CaptureFile from request
+ *  - Get All CaptureFiles from request
+ *  - Delete CaptureFile from request
  *
  * Collaborators:
  * - CaptureFile
+ * - CaptureFileMapper
  *
  * end note
  * @enduml
