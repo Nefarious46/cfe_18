@@ -1,4 +1,23 @@
 @startuml inline_umlgraph_1.svg
+class FlowController {
+    create()
+    getAll()
+    delete()
+}
+
+FlowController --> Flow : Flowyness
+
+note right of the FlowController
+Responsibilities:
+- Can retrieve multiple flows
+- Can create new Flow
+- Can delete one flow
+
+ Collaborators:
+ - Flow
+end note
+@enduml
+@startuml inline_umlgraph_2.svg
 class Flow{
     setName()
     getName()
