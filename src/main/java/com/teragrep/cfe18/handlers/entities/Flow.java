@@ -48,6 +48,27 @@ package com.teragrep.cfe18.handlers.entities;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+
+/**
+ * @class Flow
+ * @brief POJO class which forms Flow object
+ *
+ * @responsibilities
+ * - Set name
+ * - Get name
+ * - Set Id
+ * - Get Id
+ *
+ * @startuml
+ * class Flow{
+ *     setName()
+ *     getName()
+ *     setId()
+ *     getId()
+ * }
+ *
+ * @enduml
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Flow {
 
