@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Flow.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Flow.html" target="_top" xlink:title="POJO class which forms Flow object.">
 <polygon fill="white" stroke="#666666" points="223,-19 0,-19 0,0 223,0 223,-19"/>
 <text text-anchor="middle" x="111.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">com.teragrep.cfe18.handlers.entities.Flow</text>
 </a>
