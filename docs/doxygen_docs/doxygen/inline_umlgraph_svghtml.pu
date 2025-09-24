@@ -102,6 +102,30 @@ Responsibilities:
 end note
 @enduml
 @startuml inline_umlgraph_5.svg
+Class CaptureGroup {
+    - getTag()
+    - setTag()
+    - getCapture_def_group_name()
+    - setCapture_def_group_name()
+    - getCapture_definition_id()
+    - setCapture_definition_id()
+    - getId()
+    - setId()
+    - getCapture_group_type()
+    - setCapture_group_type()
+}
+
+note right of CaptureGroup
+Responsibilities:
+    - can get/set Tag
+    - can get/set Capture definition group name
+    - can get/set Capture definition Id
+    - can get/set Id
+    - can get/set Capture group type
+
+end note
+@enduml
+@startuml inline_umlgraph_6.svg
 class CaptureDefinition{
     setCaptureId()
     getCaptureId()
@@ -111,7 +135,31 @@ class CaptureDefinition{
     getCaptureMetaValue()
 }
 @enduml
-@startuml inline_umlgraph_6.svg
+@startuml inline_umlgraph_7.svg
+class CaptureRelp {
+    setId()
+    getId()
+    setTag()
+    getTag()
+    setApplication()
+    getApplication()
+    setIndex()
+    getIndex()
+    setRetentionTime()
+    getRetentionTime()
+    setSourceType()
+    getSourceType()
+    setCategory()
+    getCategory()
+    setFlow()
+    getFlow()
+    setProtocol()
+    getProtocol()
+    setType()
+    getType()
+}
+@enduml
+@startuml inline_umlgraph_8.svg
 class CaptureDefinition{
     setStorageId()
     getStorageId()
@@ -121,7 +169,7 @@ class CaptureDefinition{
     getStorageName()
 }
 @enduml
-@startuml inline_umlgraph_7.svg
+@startuml inline_umlgraph_9.svg
 class Flow{
     setName()
     getName()
