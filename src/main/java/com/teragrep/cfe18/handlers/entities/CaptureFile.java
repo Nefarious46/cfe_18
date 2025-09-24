@@ -50,7 +50,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * @Class CaptureFile
- * @Brief Manages capture file metadata
+ * @Brief POJO class which forms Capture File object.
  *
  * @responsibilities
  * - Set/get id
