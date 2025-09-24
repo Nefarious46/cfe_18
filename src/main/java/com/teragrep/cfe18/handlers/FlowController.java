@@ -88,7 +88,7 @@ import java.util.List;
  *     delete()
  * }
  *
- * FlowController --> Flow : Flowyness
+ * FlowController --> Flow : Utilizes
  *
  * note right of FlowController
  * Responsibilities:
