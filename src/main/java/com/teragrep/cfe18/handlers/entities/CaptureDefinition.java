@@ -47,7 +47,7 @@ package com.teragrep.cfe18.handlers.entities;
 
 /**
  * @class CaptureDefinition
- * @brief POJO class which forms CaptureDefinition object
+ * @brief POJO class which forms CaptureDefinition object. Capture Definition object can be used when only minimal values of Capture is needed.
  *
  * @responsibilities
  * - Set Id
