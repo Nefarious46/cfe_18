@@ -1,4 +1,26 @@
 @startuml inline_umlgraph_1.svg
+class CaptureFileController {
+ create()
+ get()
+ getAll()
+ delete()
+}
+
+CaptureFileController --> CaptureFile : Utilizes
+
+note right of CaptureFileController
+Responsibilities:
+ - Create CaptureFile
+ - Get CaptureFile
+ - Get All CaptureFiles
+ - Delete CaptureFile
+
+Collaborators:
+- CaptureFile
+
+end note
+@enduml
+@startuml inline_umlgraph_2.svg
 class FlowController {
     create()
     getAll()
@@ -17,7 +39,7 @@ Responsibilities:
  - Flow
 end note
 @enduml
-@startuml inline_umlgraph_2.svg
+@startuml inline_umlgraph_3.svg
 class CaptureFile {
 - getId()
 - setId()
@@ -65,7 +87,7 @@ Responsibilities:
 
 end note
 @enduml
-@startuml inline_umlgraph_3.svg
+@startuml inline_umlgraph_4.svg
 class Flow{
     setName()
     getName()
