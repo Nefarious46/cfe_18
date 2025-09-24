@@ -48,6 +48,77 @@ package com.teragrep.cfe18.handlers.entities;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+/**
+ * @Class CaptureFile
+ * @Brief Manages capture file metadata
+ *
+ * @responsibilities
+ * - Set/get id
+ * - Set/get application
+ * - Set/get category
+ * - Set/get sourcetype
+ * - Set/get index
+ * - Set/get retentionTime
+ * - Set/get tag
+ * - Set/get flow
+ * - Set/get protocol
+ * - Set/get tagPath
+ * - Set/get capturePath
+ * - Set/get fileProcessingTypeId
+ * - Set/get type
+ *
+ * @collaborators
+ *
+ * @startuml
+ * class CaptureFile {
+ * - getId()
+ * - setId()
+ * - getApplication()
+ * - setApplication()
+ * - getCategory()
+ * - setCategory()
+ * - getSource()
+ * - setSource()
+ * - getIndex()
+ * - setIndex()
+ * - getRetentionTime()
+ * - setRetentionTime()
+ * - getTag()
+ * - setTag()
+ * - getFlow()
+ * - setFlow()
+ * - getProtocal()
+ * - setProtocal()
+ * - getTagPath()
+ * - setTagPath()
+ * - getCapturePath()
+ * - setCapturePath()
+ * - getFileProcessingTypeId()
+ * - setFileProcessingTypeId()
+ * - getType()
+ * - setType()
+ *
+ *  }
+ * note right of CaptureFile
+ * Responsibilities:
+ * - Set/get id
+ * - Set/get application
+ * - Set/get category
+ * - Set/get sourcetype
+ * - Set/get index
+ * - Set/get retentionTime
+ * - Set/get tag
+ * - Set/get flow
+ * - Set/get protocol
+ * - Set/get tagPath
+ * - Set/get capturePath
+ * - Set/get fileProcessingTypeId
+ * - Set/get type
+ *
+ * end note
+ * @enduml
+ *
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CaptureFile {
     public enum CaptureType {
