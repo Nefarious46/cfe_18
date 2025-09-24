@@ -67,6 +67,41 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ *
+ *
+ * @Class FlowController
+ * @Brief Controller class for Flow
+ *
+ * @resbonsibilities
+ * - Can retrieve multiple flows
+ * - Can create new Flow
+ * - Can delete one flow
+ *
+ * @collaborators
+ * - Flow
+ *
+ * @startuml
+ * class FlowController {
+ *     create()
+ *     getAll()
+ *     delete()
+ * }
+ *
+ * FlowController --> Flow : Flowyness
+ *
+ * note right of the FlowController
+ * Responsibilities:
+ * - Can retrieve multiple flows
+ * - Can create new Flow
+ * - Can delete one flow
+ *
+ *  Collaborators:
+ *  - Flow
+ * end note
+ * @enduml
+ */
+
 @RestController
 @RequestMapping(path = "/flow")
 @SecurityRequirement(name = "api")
