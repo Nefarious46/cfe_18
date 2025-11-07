@@ -1,1 +1,1 @@
-var branches = ["main", "doxygen_docs"]
+var branches = ["CaptureGroupEndpointRefactor", "doxygen_docs", "main"]
