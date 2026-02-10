@@ -209,10 +209,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    ) {</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        LOGGER.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, captureId);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            Integer returnedGroupId = captureGroupMapper.create(groupId, captureId);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            LOGGER.info(<span class="stringliteral">&quot;Values returned what happened with linking &lt;[{}]&gt;&quot;</span>, returnedGroupId);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            Integer returnedCaptureId = captureGroupMapper.create(groupId, captureId);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            LOGGER.info(<span class="stringliteral">&quot;Values returned what happened with linking &lt;[{}]&gt;&quot;</span>, returnedCaptureId);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, returnedGroupId);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, returnedCaptureId);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Capture linked with group&quot;</span>);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
