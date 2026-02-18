@@ -1,1 +1,1 @@
-var branches = ["CaptureToGroupLinkageEndpointRefactor", "CaptureGroupEndpointRefactor", "EnumCapitalization", "doxygen_docs", "authorization_logging_main", "CaptureGroupEndpointRefactorV2", "EnumCapitalisation", "BrokenCaptureGroupNaming", "main"]
+var branches = ["main", "EnumCapitalisation", "doxygen_docs", "BrokenCaptureGroupNaming", "EnumCapitalization", "CaptureControllerPathRoute", "CaptureToGroupLinkageEndpointRefactor", "CaptureGroupEndpointRefactor", "CaptureGroupEndpointRefactorV2", "authorization_logging_main"]
