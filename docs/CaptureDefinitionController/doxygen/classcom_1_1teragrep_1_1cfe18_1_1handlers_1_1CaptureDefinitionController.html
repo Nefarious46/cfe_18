@@ -90,8 +90,8 @@ Collaboration diagram for com.teragrep.cfe18.handlers.CaptureDefinitionControlle
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6677b1acb7c080fff61c19bf3fbe2205" id="r_a6677b1acb7c080fff61c19bf3fbe2205"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1CaptureDefinitionController.html#a6677b1acb7c080fff61c19bf3fbe2205">get</a> (@PathVariable(&quot;id&quot;) Integer id, @RequestParam(required=false) Integer version)</td></tr>
 <tr class="separator:a6677b1acb7c080fff61c19bf3fbe2205"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03e5ed95f4d8473ea4959d1563069888" id="r_a03e5ed95f4d8473ea4959d1563069888"><td class="memItemLeft" align="right" valign="top">List&lt; CaptureDefinition &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1CaptureDefinitionController.html#a03e5ed95f4d8473ea4959d1563069888">getAll</a> ( @RequestParam(name=&quot;filter.metadata.key&quot;, required=false) String key, @RequestParam(required=false) Integer version)</td></tr>
-<tr class="separator:a03e5ed95f4d8473ea4959d1563069888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fdeae04aaf856f3fa792fcd47399a19" id="r_a6fdeae04aaf856f3fa792fcd47399a19"><td class="memItemLeft" align="right" valign="top">List&lt; CaptureDefinition &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1CaptureDefinitionController.html#a6fdeae04aaf856f3fa792fcd47399a19">getAll</a> ( @RequestParam(name=&quot;filter.metadata.key&quot;, required=false) String filterMetadataKey, @RequestParam(required=false) Integer version)</td></tr>
+<tr class="separator:a6fdeae04aaf856f3fa792fcd47399a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -161,8 +161,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a03e5ed95f4d8473ea4959d1563069888" name="a03e5ed95f4d8473ea4959d1563069888"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03e5ed95f4d8473ea4959d1563069888">&#9670;&#160;</a></span>getAll()</h2>
+<a id="a6fdeae04aaf856f3fa792fcd47399a19" name="a6fdeae04aaf856f3fa792fcd47399a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fdeae04aaf856f3fa792fcd47399a19">&#9670;&#160;</a></span>getAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +171,7 @@ Here is the call graph for this function:</div>
           <td class="memname">List&lt; CaptureDefinition &gt; com.teragrep.cfe18.handlers.CaptureDefinitionController.getAll </td>
           <td>(</td>
           <td class="paramtype">@RequestParam(name=&quot;filter.metadata.key&quot;, required=false) String&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
+          <td class="paramname"><em>filterMetadataKey</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -189,7 +189,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="CaptureDefinitionController_8java_source.html#l00157">157</a> of file <a class="el" href="CaptureDefinitionController_8java_source.html">CaptureDefinitionController.java</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  163</span>      {</div>
-<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> captureDefinitionMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1CaptureDefinitionMapper.html#a51b62632ed617b3961f6e7f26b758f06">getAll</a>(key, version);</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">return</span> captureDefinitionMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1CaptureDefinitionMapper.html#a51b62632ed617b3961f6e7f26b758f06">getAll</a>(filterMetadataKey, version);</div>
 <div class="line"><span class="lineno">  165</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1CaptureDefinitionMapper_html_a51b62632ed617b3961f6e7f26b758f06"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1CaptureDefinitionMapper.html#a51b62632ed617b3961f6e7f26b758f06">com.teragrep.cfe18.CaptureDefinitionMapper.getAll</a></div><div class="ttdeci">List&lt; CaptureDefinition &gt; getAll(String key, Integer version)</div></div>
 </div><!-- fragment -->
