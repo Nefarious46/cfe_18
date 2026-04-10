@@ -335,7 +335,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00249" data-start="{" data-end="}">
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureGroupMembersControllerTest.html#a188fcd707773f82680797d8283f42d28">  249</a></span>    public <span class="keywordtype">void</span> testSelectEmptyCaptures() {</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="comment">// Asserting get request</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        HttpGet requestGet = <span class="keyword">new</span> HttpGet(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members&quot;</span>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        HttpGet requestGet = <span class="keyword">new</span> HttpGet(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members&quot;</span>);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        requestGet.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
@@ -363,7 +363,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureGroupMembersControllerTest.html#a72e47330c5037110267b68bf4cbd44a5">  274</a></span>    public <span class="keywordtype">void</span> testCreateLinkInvalidCapture() {</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members/67&quot;</span>);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members/67&quot;</span>);</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        requestCaptureGroup.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
@@ -398,7 +398,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureGroupMembersControllerTest.html#a4a6e73c343d3d5cd197be02e1f971303">  307</a></span>    public <span class="keywordtype">void</span> testCreateLinkInvalidGroup() {</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/67/members/1&quot;</span>);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/67/members/1&quot;</span>);</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        requestCaptureGroup.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
@@ -516,7 +516,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        String captureAsActual = Assertions.assertDoesNotThrow(() -&gt; captureAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members/2&quot;</span>);</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members/2&quot;</span>);</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        requestCaptureGroup.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
 <div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span> </div>
@@ -556,7 +556,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    @Order(5)</div>
 <div class="foldopen" id="foldopen00463" data-start="{" data-end="}">
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureGroupMembersControllerTest.html#a43ad671942d4631cdf8db59e69575d67">  463</a></span>    public <span class="keywordtype">void</span> testInsertValidCaptureToGroup() {</div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members/1&quot;</span>);</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members/1&quot;</span>);</div>
 <div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>        requestCaptureGroup.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
@@ -634,7 +634,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>        String captureAsActual = Assertions.assertDoesNotThrow(() -&gt; captureAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span> </div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members/3&quot;</span>);</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        HttpPut requestCaptureGroup = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members/3&quot;</span>);</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        requestCaptureGroup.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span> </div>
@@ -672,7 +672,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>        JsonArrayBuilder expectedBuilder = Json.createArrayBuilder();</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        expectedBuilder.add(1);</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        <span class="comment">// Asserting get request</span></div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        HttpGet requestGet = <span class="keyword">new</span> HttpGet(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members&quot;</span>);</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        HttpGet requestGet = <span class="keyword">new</span> HttpGet(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members&quot;</span>);</div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        requestGet.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
@@ -694,7 +694,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    @Order(8)</div>
 <div class="foldopen" id="foldopen00595" data-start="{" data-end="}">
 <div class="line"><a id="l00595" name="l00595"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureGroupMembersControllerTest.html#a8235224926e9374cac6702e7201e47b7">  595</a></span>    public <span class="keywordtype">void</span> testDeleteInvalidGroup() {</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        HttpDelete delete = <span class="keyword">new</span> HttpDelete(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/67/members/3&quot;</span>);</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        HttpDelete delete = <span class="keyword">new</span> HttpDelete(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/67/members/3&quot;</span>);</div>
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>        delete.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
@@ -724,7 +724,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>    @Order(9)</div>
 <div class="foldopen" id="foldopen00623" data-start="{" data-end="}">
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureGroupMembersControllerTest.html#a5039402fcf869910072d2980f9ad95c7">  623</a></span>    public <span class="keywordtype">void</span> testDeleteInvalidCapture() {</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        HttpDelete delete = <span class="keyword">new</span> HttpDelete(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members/67&quot;</span>);</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        HttpDelete delete = <span class="keyword">new</span> HttpDelete(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members/67&quot;</span>);</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span> </div>
 <div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        delete.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
@@ -756,7 +756,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00652" data-start="{" data-end="}">
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureGroupMembersControllerTest.html#a72c02c5ecd17ede1f7e678ee7dd37ec2">  652</a></span>    public <span class="keywordtype">void</span> testDeleteValidLinkage() {</div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span> </div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        HttpDelete delete = <span class="keyword">new</span> HttpDelete(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/group/1/members/1&quot;</span>);</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        HttpDelete delete = <span class="keyword">new</span> HttpDelete(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/groups/1/members/1&quot;</span>);</div>
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span> </div>
 <div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        <span class="comment">// Header</span></div>
 <div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>        delete.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
