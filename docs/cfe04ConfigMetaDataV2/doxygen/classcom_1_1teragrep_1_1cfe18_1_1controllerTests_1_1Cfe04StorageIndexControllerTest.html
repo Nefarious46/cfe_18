@@ -130,167 +130,20 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00081">81</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   81</span>                           {</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>        Storage storage = <span class="keyword">new</span> Storage();</div>
-<div class="line"><span class="lineno">   84</span>        storage.setStorageType(StorageType.CFE_04);</div>
-<div class="line"><span class="lineno">   85</span>        storage.setStorageName(<span class="stringliteral">&quot;cfe_04&quot;</span>);</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>        String jsonStorage = gson.toJson(storage);</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>        <span class="comment">// forms the json to requestEntity</span></div>
-<div class="line"><span class="lineno">   90</span>        StringEntity storageRequest = <span class="keyword">new</span> StringEntity(String.valueOf(jsonStorage), ContentType.APPLICATION_JSON);</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">   93</span>        HttpPut storageAsRequest = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/storage&quot;</span>);</div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">// set requestEntity to the put request</span></div>
-<div class="line"><span class="lineno">   95</span>        storageAsRequest.setEntity(storageRequest);</div>
-<div class="line"><span class="lineno">   96</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">   97</span>        storageAsRequest.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  100</span>        HttpResponse storageResponse = Assertions</div>
-<div class="line"><span class="lineno">  101</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(storageAsRequest));</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  104</span>        HttpEntity storageResponseEntity = storageResponse.getEntity();</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  107</span>        String storageAsResponse = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(storageResponseEntity));</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  110</span>        JSONObject storageAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(storageAsResponse));</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
-<div class="line"><span class="lineno">  113</span>        String expectedStorage = <span class="stringliteral">&quot;New storage created&quot;</span>;</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  116</span>        String actualStorage = Assertions.assertDoesNotThrow(() -&gt; storageAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>        <span class="comment">// add flow and sink</span></div>
-<div class="line"><span class="lineno">  119</span>        Flow flow = <span class="keyword">new</span> Flow();</div>
-<div class="line"><span class="lineno">  120</span>        flow.setName(<span class="stringliteral">&quot;capflow&quot;</span>);</div>
-<div class="line"><span class="lineno">  121</span>        String flowJson = gson.toJson(flow);</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>        <span class="comment">// forms the json to requestEntity</span></div>
-<div class="line"><span class="lineno">  124</span>        StringEntity flowRequest = <span class="keyword">new</span> StringEntity(String.valueOf(flowJson), ContentType.APPLICATION_JSON);</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">  127</span>        HttpPut flowAsRequest = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/flow&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>        <span class="comment">// set requestEntity to the put request</span></div>
-<div class="line"><span class="lineno">  129</span>        flowAsRequest.setEntity(flowRequest);</div>
-<div class="line"><span class="lineno">  130</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">  131</span>        flowAsRequest.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  134</span>        HttpResponse flowResponse = Assertions</div>
-<div class="line"><span class="lineno">  135</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(flowAsRequest));</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  138</span>        HttpEntity flowAsResponseEntity = flowResponse.getEntity();</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  141</span>        String flowAsResponse = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(flowAsResponseEntity));</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  144</span>        JSONObject flowAsJsonResponse = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(flowAsResponse));</div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span>        String expectedFlow = <span class="stringliteral">&quot;New flow created&quot;</span>;</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  149</span>        String actualFlow = Assertions.assertDoesNotThrow(() -&gt; flowAsJsonResponse.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>        <span class="comment">// insert sink</span></div>
-<div class="line"><span class="lineno">  152</span> </div>
-<div class="line"><span class="lineno">  153</span>        Sink sink = <span class="keyword">new</span> Sink();</div>
-<div class="line"><span class="lineno">  154</span>        sink.setFlowId(1);</div>
-<div class="line"><span class="lineno">  155</span>        sink.setPort(<span class="stringliteral">&quot;cap&quot;</span>);</div>
-<div class="line"><span class="lineno">  156</span>        sink.setIpAddress(<span class="stringliteral">&quot;capsink&quot;</span>);</div>
-<div class="line"><span class="lineno">  157</span>        sink.setProtocol(<span class="stringliteral">&quot;prot&quot;</span>);</div>
-<div class="line"><span class="lineno">  158</span> </div>
-<div class="line"><span class="lineno">  159</span>        String sinkJson = gson.toJson(sink);</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>        <span class="comment">// forms the json to requestEntity</span></div>
-<div class="line"><span class="lineno">  162</span>        StringEntity sinkRequest = <span class="keyword">new</span> StringEntity(String.valueOf(sinkJson), ContentType.APPLICATION_JSON);</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">  165</span>        HttpPut sinkAsRequest = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/sink&quot;</span>);</div>
-<div class="line"><span class="lineno">  166</span>        <span class="comment">// set requestEntity to the put request</span></div>
-<div class="line"><span class="lineno">  167</span>        sinkAsRequest.setEntity(sinkRequest);</div>
-<div class="line"><span class="lineno">  168</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">  169</span>        sinkAsRequest.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">  170</span> </div>
-<div class="line"><span class="lineno">  171</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  172</span>        HttpResponse sinkResponse = Assertions</div>
-<div class="line"><span class="lineno">  173</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(sinkAsRequest));</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  176</span>        HttpEntity sinkResponseEntity = sinkResponse.getEntity();</div>
-<div class="line"><span class="lineno">  177</span> </div>
-<div class="line"><span class="lineno">  178</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  179</span>        String sinkAsResponse = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(sinkResponseEntity));</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  182</span>        JSONObject sinkAsJsonObject = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(sinkAsResponse));</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>        String expectedSink = <span class="stringliteral">&quot;New sink created&quot;</span>;</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  187</span>        String actualSink = Assertions.assertDoesNotThrow(() -&gt; sinkAsJsonObject.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  188</span> </div>
-<div class="line"><span class="lineno">  189</span>        CaptureRelp captureRelp = <span class="keyword">new</span> CaptureRelp();</div>
-<div class="line"><span class="lineno">  190</span>        captureRelp.setTag(<span class="stringliteral">&quot;relpTag&quot;</span>);</div>
-<div class="line"><span class="lineno">  191</span>        captureRelp.setRetentionTime(<span class="stringliteral">&quot;P30D&quot;</span>);</div>
-<div class="line"><span class="lineno">  192</span>        captureRelp.setCategory(<span class="stringliteral">&quot;audit&quot;</span>);</div>
-<div class="line"><span class="lineno">  193</span>        captureRelp.setApplication(<span class="stringliteral">&quot;relp&quot;</span>);</div>
-<div class="line"><span class="lineno">  194</span>        captureRelp.setIndex(<span class="stringliteral">&quot;audit_relp&quot;</span>);</div>
-<div class="line"><span class="lineno">  195</span>        captureRelp.setSourceType(<span class="stringliteral">&quot;relpsource1&quot;</span>);</div>
-<div class="line"><span class="lineno">  196</span>        captureRelp.setProtocol(<span class="stringliteral">&quot;prot&quot;</span>);</div>
-<div class="line"><span class="lineno">  197</span>        captureRelp.setFlow(<span class="stringliteral">&quot;capFlow&quot;</span>);</div>
-<div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>        String captureJson = gson.toJson(captureRelp);</div>
-<div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>        <span class="comment">// forms the json to requestEntity</span></div>
-<div class="line"><span class="lineno">  202</span>        StringEntity captureRequest = <span class="keyword">new</span> StringEntity(String.valueOf(captureJson), ContentType.APPLICATION_JSON);</div>
-<div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">  205</span>        HttpPut captureAsRequest = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/captures/definitions/relp-streams&quot;</span>);</div>
-<div class="line"><span class="lineno">  206</span>        <span class="comment">// set requestEntity to the put request</span></div>
-<div class="line"><span class="lineno">  207</span>        captureAsRequest.setEntity(captureRequest);</div>
-<div class="line"><span class="lineno">  208</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">  209</span>        captureAsRequest.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">  210</span> </div>
-<div class="line"><span class="lineno">  211</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  212</span>        HttpResponse captureResponse = Assertions</div>
-<div class="line"><span class="lineno">  213</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(captureAsRequest));</div>
-<div class="line"><span class="lineno">  214</span> </div>
-<div class="line"><span class="lineno">  215</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  216</span>        HttpEntity captureResponseEntity = captureResponse.getEntity();</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  219</span>        String captureAsResponse = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(captureResponseEntity));</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  222</span>        JSONObject captureAsJsonObject = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(captureAsResponse));</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
-<div class="line"><span class="lineno">  225</span>        String expectedCapture = <span class="stringliteral">&quot;New capture created&quot;</span>;</div>
-<div class="line"><span class="lineno">  226</span> </div>
-<div class="line"><span class="lineno">  227</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  228</span>        String actualCapture = Assertions.assertDoesNotThrow(() -&gt; captureAsJsonObject.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  229</span> </div>
-<div class="line"><span class="lineno">  230</span>        <span class="comment">// Assertions</span></div>
-<div class="line"><span class="lineno">  231</span>        assertEquals(expectedStorage, actualStorage);</div>
-<div class="line"><span class="lineno">  232</span>        assertEquals(HttpStatus.SC_CREATED, storageResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  233</span>        assertEquals(expectedFlow, actualFlow);</div>
-<div class="line"><span class="lineno">  234</span>        assertEquals(HttpStatus.SC_CREATED, flowResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  235</span>        assertEquals(expectedSink, actualSink);</div>
-<div class="line"><span class="lineno">  236</span>        assertEquals(HttpStatus.SC_CREATED, sinkResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  237</span>        assertEquals(expectedCapture, actualCapture);</div>
-<div class="line"><span class="lineno">  238</span>        assertEquals(HttpStatus.SC_CREATED, captureResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>    }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keyword">final</span> TestApiClient testApiClient = <span class="keyword">new</span> TestApiClient(<a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a>, token);</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keyword">final</span> Integer cfe04StorageId = testApiClient.insertCfe04Storage(<span class="stringliteral">&quot;cfe_04&quot;</span>);</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keyword">final</span> Integer flowId = testApiClient.insertFlow(<span class="stringliteral">&quot;capflow&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keyword">final</span> Integer sinkId = testApiClient.insertSink(flowId, <span class="stringliteral">&quot;cap&quot;</span>, <span class="stringliteral">&quot;capsink&quot;</span>, <span class="stringliteral">&quot;prot&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keyword">final</span> Integer captureId = testApiClient</div>
+<div class="line"><span class="lineno">   87</span>                .insertCapture(<span class="stringliteral">&quot;relpTag&quot;</span>, <span class="stringliteral">&quot;P30D&quot;</span>, <span class="stringliteral">&quot;audit&quot;</span>, <span class="stringliteral">&quot;relp&quot;</span>, <span class="stringliteral">&quot;audit_relp&quot;</span>, <span class="stringliteral">&quot;relpsource1&quot;</span>, <span class="stringliteral">&quot;prot&quot;</span>, <span class="stringliteral">&quot;capflow&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest_html_a68a75a812e0650fd0d7089edbbd3d476"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">com.teragrep.cfe18.controllerTests.Cfe04StorageIndexControllerTest.port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Definition</b> <a href="Cfe04StorageIndexControllerTest_8java_source.html#l00077">Cfe04StorageIndexControllerTest.java:77</a></div></div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest_aebde495f07889a5f9f93085d0c1cda17_cgraph.svg" width="579" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="aab73d3b1e5ecc4329a198d9c992c3f29" name="aab73d3b1e5ecc4329a198d9c992c3f29"></a>
@@ -308,38 +161,38 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00398">398</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  398</span>                                              {</div>
-<div class="line"><span class="lineno">  399</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">  400</span>        HttpDelete request = <span class="keyword">new</span> HttpDelete(</div>
-<div class="line"><span class="lineno">  401</span>                <span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/&quot;</span> + 1 + <span class="stringliteral">&quot;/indexes/&quot;</span> + 1</div>
-<div class="line"><span class="lineno">  402</span>        );</div>
-<div class="line"><span class="lineno">  403</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">  404</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">  405</span> </div>
-<div class="line"><span class="lineno">  406</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  407</span>        HttpResponse httpResponse = Assertions</div>
-<div class="line"><span class="lineno">  408</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
-<div class="line"><span class="lineno">  409</span> </div>
-<div class="line"><span class="lineno">  410</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  411</span>        HttpEntity entity = httpResponse.getEntity();</div>
-<div class="line"><span class="lineno">  412</span> </div>
-<div class="line"><span class="lineno">  413</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  414</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
-<div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  417</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
-<div class="line"><span class="lineno">  418</span> </div>
-<div class="line"><span class="lineno">  419</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
-<div class="line"><span class="lineno">  420</span>        String expected = <span class="stringliteral">&quot;Index deleted from cfe_04 storage&quot;</span>;</div>
-<div class="line"><span class="lineno">  421</span> </div>
-<div class="line"><span class="lineno">  422</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  423</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  424</span> </div>
-<div class="line"><span class="lineno">  425</span>        <span class="comment">// Assertions</span></div>
-<div class="line"><span class="lineno">  426</span>        assertEquals(expected, actual);</div>
-<div class="line"><span class="lineno">  427</span>        assertEquals(HttpStatus.SC_OK, httpResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  428</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00246">246</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>                                              {</div>
+<div class="line"><span class="lineno">  247</span>        <span class="comment">// Creates the request</span></div>
+<div class="line"><span class="lineno">  248</span>        HttpDelete request = <span class="keyword">new</span> HttpDelete(</div>
+<div class="line"><span class="lineno">  249</span>                <span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/&quot;</span> + 1 + <span class="stringliteral">&quot;/indexes/&quot;</span> + 1</div>
+<div class="line"><span class="lineno">  250</span>        );</div>
+<div class="line"><span class="lineno">  251</span>        <span class="comment">// Header</span></div>
+<div class="line"><span class="lineno">  252</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>        <span class="comment">// Get the response from endpoint</span></div>
+<div class="line"><span class="lineno">  255</span>        HttpResponse httpResponse = Assertions</div>
+<div class="line"><span class="lineno">  256</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>        <span class="comment">// Get the entity from response</span></div>
+<div class="line"><span class="lineno">  259</span>        HttpEntity entity = httpResponse.getEntity();</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>        <span class="comment">// Entity response string</span></div>
+<div class="line"><span class="lineno">  262</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>        <span class="comment">// Parsing response as JSONObject</span></div>
+<div class="line"><span class="lineno">  265</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
+<div class="line"><span class="lineno">  268</span>        String expected = <span class="stringliteral">&quot;Index deleted from cfe_04 storage&quot;</span>;</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
+<div class="line"><span class="lineno">  271</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>        <span class="comment">// Assertions</span></div>
+<div class="line"><span class="lineno">  274</span>        assertEquals(expected, actual);</div>
+<div class="line"><span class="lineno">  275</span>        assertEquals(HttpStatus.SC_OK, httpResponse.getStatusLine().getStatusCode());</div>
+<div class="line"><span class="lineno">  276</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -358,54 +211,54 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00347">347</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  347</span>                                           {</div>
-<div class="line"><span class="lineno">  348</span>        Cfe04StorageIndex cfe04StorageSourcetype = <span class="keyword">new</span> Cfe04StorageIndex();</div>
-<div class="line"><span class="lineno">  349</span>        cfe04StorageSourcetype.setIndexId(1);</div>
-<div class="line"><span class="lineno">  350</span>        cfe04StorageSourcetype.setColdpath(<span class="stringliteral">&quot;coldPath&quot;</span>);</div>
-<div class="line"><span class="lineno">  351</span>        cfe04StorageSourcetype.setDisabled(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  352</span>        cfe04StorageSourcetype.setHomePath(<span class="stringliteral">&quot;homePath&quot;</span>);</div>
-<div class="line"><span class="lineno">  353</span>        cfe04StorageSourcetype.setThawedPath(<span class="stringliteral">&quot;thawedPath&quot;</span>);</div>
-<div class="line"><span class="lineno">  354</span>        cfe04StorageSourcetype.setRepFactor(<span class="stringliteral">&quot;repFactor&quot;</span>);</div>
-<div class="line"><span class="lineno">  355</span> </div>
-<div class="line"><span class="lineno">  356</span>        String cfe04StorageSourcetypeJson = gson.toJson(cfe04StorageSourcetype);</div>
-<div class="line"><span class="lineno">  357</span> </div>
-<div class="line"><span class="lineno">  358</span>        <span class="comment">// forms the json to requestEntity</span></div>
-<div class="line"><span class="lineno">  359</span>        StringEntity requestEntity = <span class="keyword">new</span> StringEntity(</div>
-<div class="line"><span class="lineno">  360</span>                String.valueOf(cfe04StorageSourcetypeJson),</div>
-<div class="line"><span class="lineno">  361</span>                ContentType.APPLICATION_JSON</div>
-<div class="line"><span class="lineno">  362</span>        );</div>
-<div class="line"><span class="lineno">  363</span> </div>
-<div class="line"><span class="lineno">  364</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">  365</span>        HttpPut request = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/67/indexes&quot;</span>);</div>
-<div class="line"><span class="lineno">  366</span>        <span class="comment">// set requestEntity to the put request</span></div>
-<div class="line"><span class="lineno">  367</span>        request.setEntity(requestEntity);</div>
-<div class="line"><span class="lineno">  368</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">  369</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">  370</span> </div>
-<div class="line"><span class="lineno">  371</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  372</span>        HttpResponse httpResponse = Assertions</div>
-<div class="line"><span class="lineno">  373</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
-<div class="line"><span class="lineno">  374</span> </div>
-<div class="line"><span class="lineno">  375</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  376</span>        HttpEntity entity = httpResponse.getEntity();</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  379</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  382</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
-<div class="line"><span class="lineno">  383</span> </div>
-<div class="line"><span class="lineno">  384</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
-<div class="line"><span class="lineno">  385</span>        String expected = <span class="stringliteral">&quot;Record does not exist&quot;</span>;</div>
-<div class="line"><span class="lineno">  386</span> </div>
-<div class="line"><span class="lineno">  387</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  388</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  389</span> </div>
-<div class="line"><span class="lineno">  390</span>        <span class="comment">// Assertions</span></div>
-<div class="line"><span class="lineno">  391</span>        assertEquals(expected, actual);</div>
-<div class="line"><span class="lineno">  392</span>        assertEquals(HttpStatus.SC_NOT_FOUND, httpResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  393</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00195">195</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>                                           {</div>
+<div class="line"><span class="lineno">  196</span>        Cfe04StorageIndex cfe04StorageSourcetype = <span class="keyword">new</span> Cfe04StorageIndex();</div>
+<div class="line"><span class="lineno">  197</span>        cfe04StorageSourcetype.setIndexId(1);</div>
+<div class="line"><span class="lineno">  198</span>        cfe04StorageSourcetype.setColdpath(<span class="stringliteral">&quot;coldPath&quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span>        cfe04StorageSourcetype.setDisabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  200</span>        cfe04StorageSourcetype.setHomePath(<span class="stringliteral">&quot;homePath&quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>        cfe04StorageSourcetype.setThawedPath(<span class="stringliteral">&quot;thawedPath&quot;</span>);</div>
+<div class="line"><span class="lineno">  202</span>        cfe04StorageSourcetype.setRepFactor(<span class="stringliteral">&quot;repFactor&quot;</span>);</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>        String cfe04StorageSourcetypeJson = gson.toJson(cfe04StorageSourcetype);</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>        <span class="comment">// forms the json to requestEntity</span></div>
+<div class="line"><span class="lineno">  207</span>        StringEntity requestEntity = <span class="keyword">new</span> StringEntity(</div>
+<div class="line"><span class="lineno">  208</span>                String.valueOf(cfe04StorageSourcetypeJson),</div>
+<div class="line"><span class="lineno">  209</span>                ContentType.APPLICATION_JSON</div>
+<div class="line"><span class="lineno">  210</span>        );</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>        <span class="comment">// Creates the request</span></div>
+<div class="line"><span class="lineno">  213</span>        HttpPut request = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/67/indexes&quot;</span>);</div>
+<div class="line"><span class="lineno">  214</span>        <span class="comment">// set requestEntity to the put request</span></div>
+<div class="line"><span class="lineno">  215</span>        request.setEntity(requestEntity);</div>
+<div class="line"><span class="lineno">  216</span>        <span class="comment">// Header</span></div>
+<div class="line"><span class="lineno">  217</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>        <span class="comment">// Get the response from endpoint</span></div>
+<div class="line"><span class="lineno">  220</span>        HttpResponse httpResponse = Assertions</div>
+<div class="line"><span class="lineno">  221</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>        <span class="comment">// Get the entity from response</span></div>
+<div class="line"><span class="lineno">  224</span>        HttpEntity entity = httpResponse.getEntity();</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>        <span class="comment">// Entity response string</span></div>
+<div class="line"><span class="lineno">  227</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
+<div class="line"><span class="lineno">  228</span> </div>
+<div class="line"><span class="lineno">  229</span>        <span class="comment">// Parsing response as JSONObject</span></div>
+<div class="line"><span class="lineno">  230</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
+<div class="line"><span class="lineno">  233</span>        String expected = <span class="stringliteral">&quot;Record does not exist&quot;</span>;</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
+<div class="line"><span class="lineno">  236</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>        <span class="comment">// Assertions</span></div>
+<div class="line"><span class="lineno">  239</span>        assertEquals(expected, actual);</div>
+<div class="line"><span class="lineno">  240</span>        assertEquals(HttpStatus.SC_NOT_FOUND, httpResponse.getStatusLine().getStatusCode());</div>
+<div class="line"><span class="lineno">  241</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -424,54 +277,54 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00296">296</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  296</span>                                           {</div>
-<div class="line"><span class="lineno">  297</span>        Cfe04StorageIndex cfe04StorageSourcetype = <span class="keyword">new</span> Cfe04StorageIndex();</div>
-<div class="line"><span class="lineno">  298</span>        cfe04StorageSourcetype.setIndexId(67);</div>
-<div class="line"><span class="lineno">  299</span>        cfe04StorageSourcetype.setColdpath(<span class="stringliteral">&quot;coldPath&quot;</span>);</div>
-<div class="line"><span class="lineno">  300</span>        cfe04StorageSourcetype.setDisabled(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  301</span>        cfe04StorageSourcetype.setHomePath(<span class="stringliteral">&quot;homePath&quot;</span>);</div>
-<div class="line"><span class="lineno">  302</span>        cfe04StorageSourcetype.setThawedPath(<span class="stringliteral">&quot;thawedPath&quot;</span>);</div>
-<div class="line"><span class="lineno">  303</span>        cfe04StorageSourcetype.setRepFactor(<span class="stringliteral">&quot;repFactor&quot;</span>);</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>        String cfe04StorageSourcetypeJson = gson.toJson(cfe04StorageSourcetype);</div>
-<div class="line"><span class="lineno">  306</span> </div>
-<div class="line"><span class="lineno">  307</span>        <span class="comment">// forms the json to requestEntity</span></div>
-<div class="line"><span class="lineno">  308</span>        StringEntity requestEntity = <span class="keyword">new</span> StringEntity(</div>
-<div class="line"><span class="lineno">  309</span>                String.valueOf(cfe04StorageSourcetypeJson),</div>
-<div class="line"><span class="lineno">  310</span>                ContentType.APPLICATION_JSON</div>
-<div class="line"><span class="lineno">  311</span>        );</div>
-<div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">  314</span>        HttpPut request = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/1/indexes&quot;</span>);</div>
-<div class="line"><span class="lineno">  315</span>        <span class="comment">// set requestEntity to the put request</span></div>
-<div class="line"><span class="lineno">  316</span>        request.setEntity(requestEntity);</div>
-<div class="line"><span class="lineno">  317</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">  318</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">  319</span> </div>
-<div class="line"><span class="lineno">  320</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  321</span>        HttpResponse httpResponse = Assertions</div>
-<div class="line"><span class="lineno">  322</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
-<div class="line"><span class="lineno">  323</span> </div>
-<div class="line"><span class="lineno">  324</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  325</span>        HttpEntity entity = httpResponse.getEntity();</div>
-<div class="line"><span class="lineno">  326</span> </div>
-<div class="line"><span class="lineno">  327</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  328</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  331</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
-<div class="line"><span class="lineno">  334</span>        String expected = <span class="stringliteral">&quot;Record does not exist&quot;</span>;</div>
-<div class="line"><span class="lineno">  335</span> </div>
-<div class="line"><span class="lineno">  336</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  337</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  338</span> </div>
-<div class="line"><span class="lineno">  339</span>        <span class="comment">// Assertions</span></div>
-<div class="line"><span class="lineno">  340</span>        assertEquals(expected, actual);</div>
-<div class="line"><span class="lineno">  341</span>        assertEquals(HttpStatus.SC_NOT_FOUND, httpResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  342</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00144">144</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>                                           {</div>
+<div class="line"><span class="lineno">  145</span>        Cfe04StorageIndex cfe04StorageSourcetype = <span class="keyword">new</span> Cfe04StorageIndex();</div>
+<div class="line"><span class="lineno">  146</span>        cfe04StorageSourcetype.setIndexId(67);</div>
+<div class="line"><span class="lineno">  147</span>        cfe04StorageSourcetype.setColdpath(<span class="stringliteral">&quot;coldPath&quot;</span>);</div>
+<div class="line"><span class="lineno">  148</span>        cfe04StorageSourcetype.setDisabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  149</span>        cfe04StorageSourcetype.setHomePath(<span class="stringliteral">&quot;homePath&quot;</span>);</div>
+<div class="line"><span class="lineno">  150</span>        cfe04StorageSourcetype.setThawedPath(<span class="stringliteral">&quot;thawedPath&quot;</span>);</div>
+<div class="line"><span class="lineno">  151</span>        cfe04StorageSourcetype.setRepFactor(<span class="stringliteral">&quot;repFactor&quot;</span>);</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>        String cfe04StorageSourcetypeJson = gson.toJson(cfe04StorageSourcetype);</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>        <span class="comment">// forms the json to requestEntity</span></div>
+<div class="line"><span class="lineno">  156</span>        StringEntity requestEntity = <span class="keyword">new</span> StringEntity(</div>
+<div class="line"><span class="lineno">  157</span>                String.valueOf(cfe04StorageSourcetypeJson),</div>
+<div class="line"><span class="lineno">  158</span>                ContentType.APPLICATION_JSON</div>
+<div class="line"><span class="lineno">  159</span>        );</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        <span class="comment">// Creates the request</span></div>
+<div class="line"><span class="lineno">  162</span>        HttpPut request = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/1/indexes&quot;</span>);</div>
+<div class="line"><span class="lineno">  163</span>        <span class="comment">// set requestEntity to the put request</span></div>
+<div class="line"><span class="lineno">  164</span>        request.setEntity(requestEntity);</div>
+<div class="line"><span class="lineno">  165</span>        <span class="comment">// Header</span></div>
+<div class="line"><span class="lineno">  166</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="comment">// Get the response from endpoint</span></div>
+<div class="line"><span class="lineno">  169</span>        HttpResponse httpResponse = Assertions</div>
+<div class="line"><span class="lineno">  170</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>        <span class="comment">// Get the entity from response</span></div>
+<div class="line"><span class="lineno">  173</span>        HttpEntity entity = httpResponse.getEntity();</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>        <span class="comment">// Entity response string</span></div>
+<div class="line"><span class="lineno">  176</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>        <span class="comment">// Parsing response as JSONObject</span></div>
+<div class="line"><span class="lineno">  179</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
+<div class="line"><span class="lineno">  182</span>        String expected = <span class="stringliteral">&quot;Record does not exist&quot;</span>;</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
+<div class="line"><span class="lineno">  185</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>        <span class="comment">// Assertions</span></div>
+<div class="line"><span class="lineno">  188</span>        assertEquals(expected, actual);</div>
+<div class="line"><span class="lineno">  189</span>        assertEquals(HttpStatus.SC_NOT_FOUND, httpResponse.getStatusLine().getStatusCode());</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -490,54 +343,54 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00245">245</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>                                         {</div>
-<div class="line"><span class="lineno">  246</span>        Cfe04StorageIndex cfe04StorageIndex = <span class="keyword">new</span> Cfe04StorageIndex();</div>
-<div class="line"><span class="lineno">  247</span>        cfe04StorageIndex.setIndexId(1);</div>
-<div class="line"><span class="lineno">  248</span>        cfe04StorageIndex.setRepFactor(<span class="stringliteral">&quot;repFactor&quot;</span>);</div>
-<div class="line"><span class="lineno">  249</span>        cfe04StorageIndex.setDisabled(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  250</span>        cfe04StorageIndex.setHomePath(<span class="stringliteral">&quot;homePath&quot;</span>);</div>
-<div class="line"><span class="lineno">  251</span>        cfe04StorageIndex.setColdpath(<span class="stringliteral">&quot;coldPath&quot;</span>);</div>
-<div class="line"><span class="lineno">  252</span>        cfe04StorageIndex.setThawedPath(<span class="stringliteral">&quot;thawedPath&quot;</span>);</div>
-<div class="line"><span class="lineno">  253</span> </div>
-<div class="line"><span class="lineno">  254</span>        String cfe04StorageIndexJson = gson.toJson(cfe04StorageIndex);</div>
-<div class="line"><span class="lineno">  255</span> </div>
-<div class="line"><span class="lineno">  256</span>        <span class="comment">// forms the json to requestEntity</span></div>
-<div class="line"><span class="lineno">  257</span>        StringEntity requestEntity = <span class="keyword">new</span> StringEntity(</div>
-<div class="line"><span class="lineno">  258</span>                String.valueOf(cfe04StorageIndexJson),</div>
-<div class="line"><span class="lineno">  259</span>                ContentType.APPLICATION_JSON</div>
-<div class="line"><span class="lineno">  260</span>        );</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><span class="lineno">  263</span>        HttpPut request = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/1/indexes&quot;</span>);</div>
-<div class="line"><span class="lineno">  264</span>        <span class="comment">// set requestEntity to the put request</span></div>
-<div class="line"><span class="lineno">  265</span>        request.setEntity(requestEntity);</div>
-<div class="line"><span class="lineno">  266</span>        <span class="comment">// Header</span></div>
-<div class="line"><span class="lineno">  267</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
-<div class="line"><span class="lineno">  268</span> </div>
-<div class="line"><span class="lineno">  269</span>        <span class="comment">// Get the response from endpoint</span></div>
-<div class="line"><span class="lineno">  270</span>        HttpResponse httpResponse = Assertions</div>
-<div class="line"><span class="lineno">  271</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>        <span class="comment">// Get the entity from response</span></div>
-<div class="line"><span class="lineno">  274</span>        HttpEntity entity = httpResponse.getEntity();</div>
-<div class="line"><span class="lineno">  275</span> </div>
-<div class="line"><span class="lineno">  276</span>        <span class="comment">// Entity response string</span></div>
-<div class="line"><span class="lineno">  277</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
-<div class="line"><span class="lineno">  278</span> </div>
-<div class="line"><span class="lineno">  279</span>        <span class="comment">// Parsing response as JSONObject</span></div>
-<div class="line"><span class="lineno">  280</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
-<div class="line"><span class="lineno">  281</span> </div>
-<div class="line"><span class="lineno">  282</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
-<div class="line"><span class="lineno">  283</span>        String expected = <span class="stringliteral">&quot;New index linked to storage&quot;</span>;</div>
-<div class="line"><span class="lineno">  284</span> </div>
-<div class="line"><span class="lineno">  285</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
-<div class="line"><span class="lineno">  286</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
-<div class="line"><span class="lineno">  287</span> </div>
-<div class="line"><span class="lineno">  288</span>        <span class="comment">// Assertions</span></div>
-<div class="line"><span class="lineno">  289</span>        assertEquals(expected, actual);</div>
-<div class="line"><span class="lineno">  290</span>        assertEquals(HttpStatus.SC_CREATED, httpResponse.getStatusLine().getStatusCode());</div>
-<div class="line"><span class="lineno">  291</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html#l00093">93</a> of file <a class="el" href="Cfe04StorageIndexControllerTest_8java_source.html">Cfe04StorageIndexControllerTest.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                         {</div>
+<div class="line"><span class="lineno">   94</span>        Cfe04StorageIndex cfe04StorageIndex = <span class="keyword">new</span> Cfe04StorageIndex();</div>
+<div class="line"><span class="lineno">   95</span>        cfe04StorageIndex.setIndexId(1);</div>
+<div class="line"><span class="lineno">   96</span>        cfe04StorageIndex.setRepFactor(<span class="stringliteral">&quot;repFactor&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>        cfe04StorageIndex.setDisabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   98</span>        cfe04StorageIndex.setHomePath(<span class="stringliteral">&quot;homePath&quot;</span>);</div>
+<div class="line"><span class="lineno">   99</span>        cfe04StorageIndex.setColdpath(<span class="stringliteral">&quot;coldPath&quot;</span>);</div>
+<div class="line"><span class="lineno">  100</span>        cfe04StorageIndex.setThawedPath(<span class="stringliteral">&quot;thawedPath&quot;</span>);</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>        String cfe04StorageIndexJson = gson.toJson(cfe04StorageIndex);</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>        <span class="comment">// forms the json to requestEntity</span></div>
+<div class="line"><span class="lineno">  105</span>        StringEntity requestEntity = <span class="keyword">new</span> StringEntity(</div>
+<div class="line"><span class="lineno">  106</span>                String.valueOf(cfe04StorageIndexJson),</div>
+<div class="line"><span class="lineno">  107</span>                ContentType.APPLICATION_JSON</div>
+<div class="line"><span class="lineno">  108</span>        );</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>        <span class="comment">// Creates the request</span></div>
+<div class="line"><span class="lineno">  111</span>        HttpPut request = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#a68a75a812e0650fd0d7089edbbd3d476">port</a> + <span class="stringliteral">&quot;/v2/storages/definitions/cfe_04/1/indexes&quot;</span>);</div>
+<div class="line"><span class="lineno">  112</span>        <span class="comment">// set requestEntity to the put request</span></div>
+<div class="line"><span class="lineno">  113</span>        request.setEntity(requestEntity);</div>
+<div class="line"><span class="lineno">  114</span>        <span class="comment">// Header</span></div>
+<div class="line"><span class="lineno">  115</span>        request.setHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <span class="stringliteral">&quot;Bearer &quot;</span> + token);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        <span class="comment">// Get the response from endpoint</span></div>
+<div class="line"><span class="lineno">  118</span>        HttpResponse httpResponse = Assertions</div>
+<div class="line"><span class="lineno">  119</span>                .assertDoesNotThrow(() -&gt; HttpClientBuilder.create().build().execute(request));</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <span class="comment">// Get the entity from response</span></div>
+<div class="line"><span class="lineno">  122</span>        HttpEntity entity = httpResponse.getEntity();</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>        <span class="comment">// Entity response string</span></div>
+<div class="line"><span class="lineno">  125</span>        String responseString = Assertions.assertDoesNotThrow(() -&gt; EntityUtils.toString(entity));</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>        <span class="comment">// Parsing response as JSONObject</span></div>
+<div class="line"><span class="lineno">  128</span>        JSONObject responseAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(responseString));</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
+<div class="line"><span class="lineno">  131</span>        String expected = <span class="stringliteral">&quot;New index linked to storage&quot;</span>;</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
+<div class="line"><span class="lineno">  134</span>        String actual = Assertions.assertDoesNotThrow(() -&gt; responseAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>        <span class="comment">// Assertions</span></div>
+<div class="line"><span class="lineno">  137</span>        assertEquals(expected, actual);</div>
+<div class="line"><span class="lineno">  138</span>        assertEquals(HttpStatus.SC_CREATED, httpResponse.getStatusLine().getStatusCode());</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
