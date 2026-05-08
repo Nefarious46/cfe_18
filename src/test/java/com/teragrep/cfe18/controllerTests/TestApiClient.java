@@ -290,11 +290,10 @@ public class TestApiClient {
 
     }
 
-    public Integer insertCfe04Storage(final String storageName, final Integer flowId) {
+    public Integer insertCfe04Storage(final String storageName) {
         Storage storage = new Storage();
         storage.setStorageType(StorageType.CFE_04);
         storage.setStorageName(storageName);
-        storage.setFlowId(flowId);
 
         String jsonStorage = gson.toJson(storage);
 
