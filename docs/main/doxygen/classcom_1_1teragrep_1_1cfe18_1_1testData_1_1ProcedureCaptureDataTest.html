@@ -154,9 +154,9 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  134</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from cfe_18.newline&quot;</span>);</div>
 <div class="line"><span class="lineno">  135</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from cfe_18.inputtype&quot;</span>);</div>
 <div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from flow.capture_sink&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from flow.flows&quot;</span>);</div>
-<div class="line"><span class="lineno">  139</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from flow.L7&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from cfe_18.capture_sink&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from cfe_18.flows&quot;</span>);</div>
+<div class="line"><span class="lineno">  139</span>        deleteStatement.addBatch(<span class="stringliteral">&quot;delete from cfe_18.L7&quot;</span>);</div>
 <div class="line"><span class="lineno">  140</span>        deleteStatement.executeBatch();</div>
 <div class="line"><span class="lineno">  141</span>    }</div>
 </div><!-- fragment -->
@@ -186,9 +186,9 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   77</span>        QueryDataSet partialDataSet = <span class="keyword">new</span> QueryDataSet(connection);</div>
 <div class="line"><span class="lineno">   78</span> </div>
 <div class="line"><span class="lineno">   79</span>        <span class="comment">// Flow data</span></div>
-<div class="line"><span class="lineno">   80</span>        partialDataSet.addTable(<span class="stringliteral">&quot;flow.flows&quot;</span>);</div>
-<div class="line"><span class="lineno">   81</span>        partialDataSet.addTable(<span class="stringliteral">&quot;flow.L7&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>        partialDataSet.addTable(<span class="stringliteral">&quot;flow.capture_sink&quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span>        partialDataSet.addTable(<span class="stringliteral">&quot;cfe_18.flows&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>        partialDataSet.addTable(<span class="stringliteral">&quot;cfe_18.L7&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>        partialDataSet.addTable(<span class="stringliteral">&quot;cfe_18.capture_sink&quot;</span>);</div>
 <div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>        <span class="comment">// Processing type data</span></div>
 <div class="line"><span class="lineno">   85</span>        partialDataSet.addTable(<span class="stringliteral">&quot;cfe_18.ruleset&quot;</span>);</div>
@@ -254,13 +254,13 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  144</span> </div>
 <div class="line"><span class="lineno">  145</span>        Statement insertTestData = conn.createStatement();</div>
 <div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>        insertTestData.addBatch(<span class="stringliteral">&quot;insert into flow.L7(id, app_protocol) values (1, &#39;tcp-plain&#39;);&quot;</span>);</div>
+<div class="line"><span class="lineno">  147</span>        insertTestData.addBatch(<span class="stringliteral">&quot;insert into cfe_18.L7(id, app_protocol) values (1, &#39;tcp-plain&#39;);&quot;</span>);</div>
 <div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>        insertTestData.addBatch(<span class="stringliteral">&quot;insert into flow.flows(id, flowname) values (1, &#39;flow1&#39;);&quot;</span>);</div>
+<div class="line"><span class="lineno">  149</span>        insertTestData.addBatch(<span class="stringliteral">&quot;insert into cfe_18.flows(id, flowname) values (1, &#39;flow1&#39;);&quot;</span>);</div>
 <div class="line"><span class="lineno">  150</span> </div>
 <div class="line"><span class="lineno">  151</span>        insertTestData</div>
 <div class="line"><span class="lineno">  152</span>                .addBatch(</div>
-<div class="line"><span class="lineno">  153</span>                        <span class="stringliteral">&quot;insert into flow.capture_sink(id, L7_id, flow_id, ip_address,sink_port) values (1,1,1,&#39;ip1&#39;,&#39;601&#39;);&quot;</span></div>
+<div class="line"><span class="lineno">  153</span>                        <span class="stringliteral">&quot;insert into cfe_18.capture_sink(id, L7_id, flow_id, ip_address,sink_port) values (1,1,1,&#39;ip1&#39;,&#39;601&#39;);&quot;</span></div>
 <div class="line"><span class="lineno">  154</span>                );</div>
 <div class="line"><span class="lineno">  155</span> </div>
 <div class="line"><span class="lineno">  156</span>        insertTestData.addBatch(<span class="stringliteral">&quot;insert into cfe_18.inputtype(id, inputtype) values (1, &#39;regex&#39;),(2, &#39;newline&#39;);&quot;</span>);</div>
