@@ -5,10 +5,12 @@ var searchData=
   ['insertcapture_2',['insertCapture',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a6e84433cb230632ee5480fe3743337bd',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
   ['insertcapturegroup_3',['insertCaptureGroup',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a7e123397ea901ac5105f3d9c5b9c1a85',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
   ['insertflow_4',['insertFlow',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a9a28c3ecb7b02eee1e6c5bbb10893cc3',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
-  ['inserthostgroup_5',['insertHostGroup',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a5a045f8b4708f0a871bc5b8f254e3b65',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
-  ['insertlinkage_6',['insertLinkage',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#abf26572fa5279129438f6f959b396db9',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
-  ['insertrelphost_7',['insertRelpHost',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a423b9ca7d8d2865e7ce9742ba1ca3922',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
-  ['insertsink_8',['insertSink',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#af143a3c89fe0d24ab6a99904d295f9a9',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
-  ['iswritedefault_9',['isWriteDefault',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a91f107588f0cdcfe152eae440fe9cb06',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]],
-  ['iswritemeta_10',['isWriteMeta',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a135d9e1d180d630017870de6341d2ccf',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]]
+  ['inserthostfile_5',['insertHostFile',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a88f2628dde191cc91b55a5e817ea6420',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
+  ['inserthostgroup_6',['insertHostGroup',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a5a045f8b4708f0a871bc5b8f254e3b65',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
+  ['inserthub_7',['insertHub',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#abdb64aea0c101be4794dc4aa640c8d6f',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
+  ['insertlinkage_8',['insertLinkage',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#abf26572fa5279129438f6f959b396db9',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
+  ['insertrelphost_9',['insertRelpHost',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#a423b9ca7d8d2865e7ce9742ba1ca3922',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
+  ['insertsink_10',['insertSink',['../classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TestApiClient.html#af143a3c89fe0d24ab6a99904d295f9a9',1,'com::teragrep::cfe18::controllerTests::TestApiClient']]],
+  ['iswritedefault_11',['isWriteDefault',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a91f107588f0cdcfe152eae440fe9cb06',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]],
+  ['iswritemeta_12',['isWriteMeta',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a135d9e1d180d630017870de6341d2ccf',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]]
 ];
