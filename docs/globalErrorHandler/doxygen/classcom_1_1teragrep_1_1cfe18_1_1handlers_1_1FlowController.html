@@ -123,22 +123,14 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="FlowController_8java_source.html#l00113">113</a> of file <a class="el" href="FlowController_8java_source.html">FlowController.java</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  113</span>                                                                    {</div>
 <div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController.html#a126968e8a29d528646fede1390eb837b">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, newFlow);</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  116</span>            Flow f = flowMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#ab18c3ce0806d3f4dbc5885722cdb3276">create</a>(newFlow.getName());</div>
-<div class="line"><span class="lineno">  117</span>            <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController.html#a126968e8a29d528646fede1390eb837b">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, f);</div>
-<div class="line"><span class="lineno">  118</span>            JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  119</span>            jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, f.getId());</div>
-<div class="line"><span class="lineno">  120</span>            jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New flow created&quot;</span>);</div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
-<div class="line"><span class="lineno">  122</span>        }</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">catch</span> (RuntimeException ex) {</div>
-<div class="line"><span class="lineno">  124</span>            <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController.html#a126968e8a29d528646fede1390eb837b">LOGGER</a>.error(ex.getMessage());</div>
-<div class="line"><span class="lineno">  125</span>            JSONObject jsonErr = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  126</span>            jsonErr.put(<span class="stringliteral">&quot;id&quot;</span>, newFlow.getId());</div>
-<div class="line"><span class="lineno">  127</span>            jsonErr.put(<span class="stringliteral">&quot;message&quot;</span>, ex.getCause().toString());</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonErr.toString(), HttpStatus.BAD_REQUEST);</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="line"><span class="lineno">  115</span>        Flow f = flowMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#ab18c3ce0806d3f4dbc5885722cdb3276">create</a>(newFlow.getName());</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController.html#a126968e8a29d528646fede1390eb837b">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, f);</div>
+<div class="line"><span class="lineno">  117</span>        JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
+<div class="line"><span class="lineno">  118</span>        jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, f.getId());</div>
+<div class="line"><span class="lineno">  119</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New flow created&quot;</span>);</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController_html_a126968e8a29d528646fede1390eb837b"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController.html#a126968e8a29d528646fede1390eb837b">com.teragrep.cfe18.handlers.FlowController.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="FlowController_8java_source.html#l00074">FlowController.java:74</a></div></div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper_html_ab18c3ce0806d3f4dbc5885722cdb3276"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#ab18c3ce0806d3f4dbc5885722cdb3276">com.teragrep.cfe18.FlowMapper.create</a></div><div class="ttdeci">Flow create(String name)</div></div>
 </div><!-- fragment -->
@@ -160,15 +152,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FlowController_8java_source.html#l00190">190</a> of file <a class="el" href="FlowController_8java_source.html">FlowController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>                                                                     {</div>
-<div class="line"><span class="lineno">  191</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController.html#a126968e8a29d528646fede1390eb837b">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting flow  &lt;[{}]&gt;&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  192</span>        flowMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#a9a7fb71efce2b761d4017f58be06adbe">delete</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  193</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  194</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  195</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Flow deleted&quot;</span>);</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  197</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FlowController_8java_source.html#l00182">182</a> of file <a class="el" href="FlowController_8java_source.html">FlowController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                     {</div>
+<div class="line"><span class="lineno">  183</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1FlowController.html#a126968e8a29d528646fede1390eb837b">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting flow  &lt;[{}]&gt;&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  184</span>        flowMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#a9a7fb71efce2b761d4017f58be06adbe">delete</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  185</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
+<div class="line"><span class="lineno">  186</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  187</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Flow deleted&quot;</span>);</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper_html_a9a7fb71efce2b761d4017f58be06adbe"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#a9a7fb71efce2b761d4017f58be06adbe">com.teragrep.cfe18.FlowMapper.delete</a></div><div class="ttdeci">void delete(int id)</div></div>
 </div><!-- fragment -->
 </div>
@@ -189,10 +181,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FlowController_8java_source.html#l00153">153</a> of file <a class="el" href="FlowController_8java_source.html">FlowController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>                                                                              {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span> flowMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#a22f17bc1bceff512e34c6a632e299a5b">getAll</a>(version);</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FlowController_8java_source.html#l00145">145</a> of file <a class="el" href="FlowController_8java_source.html">FlowController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                                              {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> flowMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#a22f17bc1bceff512e34c6a632e299a5b">getAll</a>(version);</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper_html_a22f17bc1bceff512e34c6a632e299a5b"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1FlowMapper.html#a22f17bc1bceff512e34c6a632e299a5b">com.teragrep.cfe18.FlowMapper.getAll</a></div><div class="ttdeci">List&lt; Flow &gt; getAll(Integer version)</div></div>
 </div><!-- fragment -->
 </div>
