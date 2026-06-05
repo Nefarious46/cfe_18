@@ -100,7 +100,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00059">59</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00061">61</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7960703cbfc2d8dea6793fe693504078" name="a7960703cbfc2d8dea6793fe693504078"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7960703cbfc2d8dea6793fe693504078">&#9670;&#160;</a></span>DatabaseExceptionHandler()</h2>
@@ -118,10 +118,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00065">65</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                                   {</div>
-<div class="line"><span class="lineno">   66</span>        this.resolver = resolver;</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00067">67</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                                   {</div>
+<div class="line"><span class="lineno">   68</span>        this.resolver = resolver;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -142,16 +142,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00070">70</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                                                                      {</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1DatabaseExceptionHandler.html#aa21ec7ac798a65306c66a71ea903f62b">LOGGER</a>.error(ex.getMessage(), ex);</div>
-<div class="line"><span class="lineno">   72</span>        JsonObjectBuilder errBuilder = Json.createObjectBuilder();</div>
-<div class="line"><span class="lineno">   73</span>        MariaDBError mariaDBError = resolver.<a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1MariaDBErrorResolver.html#ab65d8b69ae2cd041c0a76d5eb20743ff">resolve</a>(ex.getErrorCode());</div>
-<div class="line"><span class="lineno">   74</span>        errBuilder.add(<span class="stringliteral">&quot;message&quot;</span>, mariaDBError.message());</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(errBuilder.build().toString(), mariaDBError.status());</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1DatabaseExceptionHandler_html_aa21ec7ac798a65306c66a71ea903f62b"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1DatabaseExceptionHandler.html#aa21ec7ac798a65306c66a71ea903f62b">com.teragrep.cfe18.DatabaseExceptionHandler.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="DatabaseExceptionHandler_8java_source.html#l00061">DatabaseExceptionHandler.java:61</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00072">72</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                                      {</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1DatabaseExceptionHandler.html#aa21ec7ac798a65306c66a71ea903f62b">LOGGER</a>.error(ex.getMessage(), ex);</div>
+<div class="line"><span class="lineno">   74</span>        JsonObjectBuilder errBuilder = Json.createObjectBuilder();</div>
+<div class="line"><span class="lineno">   75</span>        MariaDBError mariaDBError = resolver.<a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1MariaDBErrorResolver.html#ab65d8b69ae2cd041c0a76d5eb20743ff">resolve</a>(ex.getErrorCode());</div>
+<div class="line"><span class="lineno">   76</span>        errBuilder.add(<span class="stringliteral">&quot;message&quot;</span>, mariaDBError.message());</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(errBuilder.build().toString(), mariaDBError.status());</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1DatabaseExceptionHandler_html_aa21ec7ac798a65306c66a71ea903f62b"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1DatabaseExceptionHandler.html#aa21ec7ac798a65306c66a71ea903f62b">com.teragrep.cfe18.DatabaseExceptionHandler.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="DatabaseExceptionHandler_8java_source.html#l00063">DatabaseExceptionHandler.java:63</a></div></div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1MariaDBErrorResolver_html_ab65d8b69ae2cd041c0a76d5eb20743ff"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1MariaDBErrorResolver.html#ab65d8b69ae2cd041c0a76d5eb20743ff">com.teragrep.cfe18.MariaDBErrorResolver.resolve</a></div><div class="ttdeci">MariaDBError resolve(int errorCode)</div><div class="ttdef"><b>Definition</b> <a href="MariaDBErrorResolver_8java_source.html#l00070">MariaDBErrorResolver.java:70</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -182,7 +182,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00061">61</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DatabaseExceptionHandler_8java_source.html#l00063">63</a> of file <a class="el" href="DatabaseExceptionHandler_8java_source.html">DatabaseExceptionHandler.java</a>.</p>
 
 </div>
 </div>
