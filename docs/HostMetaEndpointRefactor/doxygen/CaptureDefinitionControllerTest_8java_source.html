@@ -126,7 +126,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> * Teragrep, the applicable Commercial License may apply to this file if you as</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> * a licensee so wish it.</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacecom_1_1teragrep_1_1cfe18_1_1controllerTests.html">   46</a></span><span class="keyword">package </span>com.teragrep.cfe18.controllerTests;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">package </span>com.teragrep.cfe18.controllerTests;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">import</span> com.google.gson.Gson;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">import</span> com.teragrep.cfe18.handlers.entities.*;</div>
@@ -153,7 +153,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>@TestInstance(TestInstance.Lifecycle.PER_CLASS)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>@TestMethodOrder(MethodOrderer.OrderAnnotation.class)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>@ExtendWith(<a class="code hl_class" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1MigrateDatabaseExtension.html">MigrateDatabaseExtension</a>.class)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>@ExtendWith(MigrateDatabaseExtension.class)</div>
 <div class="foldopen" id="foldopen00074" data-start="{" data-end="};">
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest.html">   74</a></span>public class <a class="code hl_class" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest.html">CaptureDefinitionControllerTest</a> extends TestSpringBootInformation {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
@@ -413,9 +413,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00319" data-start="{" data-end="}">
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest.html#aee6e5fefadb129cba7eeba2fe3c45939">  319</a></span>    public <span class="keywordtype">void</span> testSelectValidCaptureWithKey() {</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        CaptureMeta captureMeta = <span class="keyword">new</span> CaptureMeta();</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        captureMeta.setCapture_id(1);</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        captureMeta.setCapture_meta_key(<span class="stringliteral">&quot;relpKey1&quot;</span>);</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        captureMeta.setCapture_meta_value(<span class="stringliteral">&quot;relpValue1&quot;</span>);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        captureMeta.setCaptureId(1);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        captureMeta.setCaptureMetaKey(<span class="stringliteral">&quot;relpKey1&quot;</span>);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        captureMeta.setCaptureMetaValue(<span class="stringliteral">&quot;relpValue1&quot;</span>);</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        String captureMetaJson = gson.toJson(captureMeta);</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
@@ -426,7 +426,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        );</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <span class="comment">// Creates the request</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        HttpPut captureMetaRequest = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/capture/meta/&quot;</span>);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        HttpPut captureMetaRequest = <span class="keyword">new</span> HttpPut(<span class="stringliteral">&quot;http://localhost:&quot;</span> + port + <span class="stringliteral">&quot;/v2/captures/definitions/1/metadata&quot;</span>);</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="comment">// set requestEntity to the put request</span></div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        captureMetaRequest.setEntity(requestEntityCaptureMeta);</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        <span class="comment">// Header</span></div>
@@ -447,7 +447,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <span class="comment">// Parsin respponse as JSONObject</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        JSONObject captureMetaAsJson = Assertions.assertDoesNotThrow(() -&gt; <span class="keyword">new</span> JSONObject(captureMetaAsResponse));</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        <span class="comment">// Creating expected message as JSON Object from the data that was sent towards endpoint</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        String expectedCaptureMeta = <span class="stringliteral">&quot;New capture meta created for = 1&quot;</span>;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        String expectedCaptureMeta = <span class="stringliteral">&quot;New capture meta created&quot;</span>;</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <span class="comment">// Creating string from Json that was given as a response</span></div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        String actualCaptureMeta = Assertions.assertDoesNotThrow(() -&gt; captureMetaAsJson.get(<span class="stringliteral">&quot;message&quot;</span>).toString());</div>
@@ -518,7 +518,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest_html"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest.html">com.teragrep.cfe18.controllerTests.CaptureDefinitionControllerTest</a></div><div class="ttdef"><b>Definition</b> <a href="CaptureDefinitionControllerTest_8java_source.html#l00074">CaptureDefinitionControllerTest.java:74</a></div></div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest_html_aa43ecab1c8364fe7f2875ee3ab3d6571"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest.html#aa43ecab1c8364fe7f2875ee3ab3d6571">com.teragrep.cfe18.controllerTests.CaptureDefinitionControllerTest.testData</a></div><div class="ttdeci">void testData()</div><div class="ttdef"><b>Definition</b> <a href="CaptureDefinitionControllerTest_8java_source.html#l00083">CaptureDefinitionControllerTest.java:83</a></div></div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest_html_afbb97713b3a420b6f464ee95bfc24cae"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureDefinitionControllerTest.html#afbb97713b3a420b6f464ee95bfc24cae">com.teragrep.cfe18.controllerTests.CaptureDefinitionControllerTest.port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Definition</b> <a href="CaptureDefinitionControllerTest_8java_source.html#l00079">CaptureDefinitionControllerTest.java:79</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1MigrateDatabaseExtension_html"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1MigrateDatabaseExtension.html">com.teragrep.cfe18.controllerTests.MigrateDatabaseExtension</a></div><div class="ttdef"><b>Definition</b> <a href="MigrateDatabaseExtension_8java_source.html#l00053">MigrateDatabaseExtension.java:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
