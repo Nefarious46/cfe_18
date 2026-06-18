@@ -100,7 +100,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00072">72</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00071">71</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6a3ce13ca8b76e3b4bae5b0384c44a38" name="a6a3ce13ca8b76e3b4bae5b0384c44a38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a3ce13ca8b76e3b4bae5b0384c44a38">&#9670;&#160;</a></span>create()</h2>
@@ -128,42 +128,24 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00102">102</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>      {</div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, storageId);</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  108</span>            Integer returnedStorageId = cfe04StorageSourcetypeMapper</div>
-<div class="line"><span class="lineno">  109</span>                    .<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper.html#ae7273f0846cd573023cd06c139bc8c31">create</a>(</div>
-<div class="line"><span class="lineno">  110</span>                            storageId, cfe04StorageSourcetype.getSourcetypeId(), cfe04StorageSourcetype.getMaxDaysAgo(),</div>
-<div class="line"><span class="lineno">  111</span>                            cfe04StorageSourcetype.getCategory(), cfe04StorageSourcetype.getSourceDescription(),</div>
-<div class="line"><span class="lineno">  112</span>                            cfe04StorageSourcetype.getTruncate(), cfe04StorageSourcetype.isFreeformIndexerEnabled(),</div>
-<div class="line"><span class="lineno">  113</span>                            cfe04StorageSourcetype.getFreeformIndexerText(),</div>
-<div class="line"><span class="lineno">  114</span>                            cfe04StorageSourcetype.isFreeformLbEnabled(), cfe04StorageSourcetype.getFreeformLbText()</div>
-<div class="line"><span class="lineno">  115</span>                    );</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, returnedStorageId);</div>
-<div class="line"><span class="lineno">  117</span>            JsonObjectBuilder returnJson = Json.createObjectBuilder();</div>
-<div class="line"><span class="lineno">  118</span>            returnJson.add(<span class="stringliteral">&quot;id&quot;</span>, storageId);</div>
-<div class="line"><span class="lineno">  119</span>            returnJson.add(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New sourcetype linked to storage&quot;</span>);</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(returnJson.build().toString(), HttpStatus.CREATED);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">catch</span> (RuntimeException ex) {</div>
-<div class="line"><span class="lineno">  123</span>            <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.error(ex.getMessage());</div>
-<div class="line"><span class="lineno">  124</span>            JsonObjectBuilder returnJson = Json.createObjectBuilder();</div>
-<div class="line"><span class="lineno">  125</span>            returnJson.add(<span class="stringliteral">&quot;id&quot;</span>, storageId);</div>
-<div class="line"><span class="lineno">  126</span>            returnJson.add(<span class="stringliteral">&quot;message&quot;</span>, ex.getCause().getMessage());</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keyword">final</span> Throwable cause = ex.getCause();</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span> (cause instanceof SQLException) {</div>
-<div class="line"><span class="lineno">  129</span>                <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.error((cause).getMessage());</div>
-<div class="line"><span class="lineno">  130</span>                String state = ((SQLException) cause).getSQLState();</div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (state.equals(<span class="stringliteral">&quot;23000&quot;</span>)) {</div>
-<div class="line"><span class="lineno">  132</span>                    returnJson.add(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Record does not exist&quot;</span>);</div>
-<div class="line"><span class="lineno">  133</span>                    <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(returnJson.build().toString(), HttpStatus.NOT_FOUND);</div>
-<div class="line"><span class="lineno">  134</span>                }</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(returnJson.build().toString(), HttpStatus.BAD_REQUEST);</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController_html_af0edd7c2979cc80ebf994cc0360302fc"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">com.teragrep.cfe18.handlers.Cfe04StorageSourcetypeController.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="Cfe04StorageSourcetypeController_8java_source.html#l00074">Cfe04StorageSourcetypeController.java:74</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00101">101</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>      {</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, storageId);</div>
+<div class="line"><span class="lineno">  106</span>        Integer returnedStorageId = cfe04StorageSourcetypeMapper</div>
+<div class="line"><span class="lineno">  107</span>                .<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper.html#ae7273f0846cd573023cd06c139bc8c31">create</a>(</div>
+<div class="line"><span class="lineno">  108</span>                        storageId, cfe04StorageSourcetype.getSourcetypeId(), cfe04StorageSourcetype.getMaxDaysAgo(),</div>
+<div class="line"><span class="lineno">  109</span>                        cfe04StorageSourcetype.getCategory(), cfe04StorageSourcetype.getSourceDescription(),</div>
+<div class="line"><span class="lineno">  110</span>                        cfe04StorageSourcetype.getTruncate(), cfe04StorageSourcetype.isFreeformIndexerEnabled(),</div>
+<div class="line"><span class="lineno">  111</span>                        cfe04StorageSourcetype.getFreeformIndexerText(), cfe04StorageSourcetype.isFreeformLbEnabled(),</div>
+<div class="line"><span class="lineno">  112</span>                        cfe04StorageSourcetype.getFreeformLbText()</div>
+<div class="line"><span class="lineno">  113</span>                );</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, returnedStorageId);</div>
+<div class="line"><span class="lineno">  115</span>        JsonObjectBuilder returnJson = Json.createObjectBuilder();</div>
+<div class="line"><span class="lineno">  116</span>        returnJson.add(<span class="stringliteral">&quot;id&quot;</span>, storageId);</div>
+<div class="line"><span class="lineno">  117</span>        returnJson.add(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New sourcetype linked to storage&quot;</span>);</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(returnJson.build().toString(), HttpStatus.CREATED);</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController_html_af0edd7c2979cc80ebf994cc0360302fc"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">com.teragrep.cfe18.handlers.Cfe04StorageSourcetypeController.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="Cfe04StorageSourcetypeController_8java_source.html#l00073">Cfe04StorageSourcetypeController.java:73</a></div></div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper_html_ae7273f0846cd573023cd06c139bc8c31"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper.html#ae7273f0846cd573023cd06c139bc8c31">com.teragrep.cfe18.Cfe04StorageSourcetypeMapper.create</a></div><div class="ttdeci">Integer create(final int storageId, final int sourceTypeId, final String maxDaysAgo, final String category, final String sourceDescription, final String truncate, final boolean freeformIndexerEnabled, final String freeformIndexerText, final boolean freeformLbEnabled, final String freefromLbText)</div></div>
 </div><!-- fragment -->
 </div>
@@ -194,24 +176,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00157">157</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  160</span>      {</div>
-<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting cfe 04 storage sourcetype &lt;[{}]&gt;&quot;</span>, cfe04Id);</div>
-<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  163</span>            cfe04StorageSourcetypeMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper.html#a9f8cbe0fc00e2d87462572a2cb80977e">delete</a>(cfe04Id, sourceTypeId);</div>
-<div class="line"><span class="lineno">  164</span>            JsonObjectBuilder returnJson = Json.createObjectBuilder();</div>
-<div class="line"><span class="lineno">  165</span>            returnJson.add(<span class="stringliteral">&quot;id&quot;</span>, cfe04Id);</div>
-<div class="line"><span class="lineno">  166</span>            returnJson.add(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Sourcetype deleted from cfe_04 storage&quot;</span>);</div>
-<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(returnJson.build().toString(), HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  168</span>        }</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">catch</span> (RuntimeException ex) {</div>
-<div class="line"><span class="lineno">  170</span>            <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.error(ex.getMessage());</div>
-<div class="line"><span class="lineno">  171</span>            JsonObjectBuilder returnJson = Json.createObjectBuilder();</div>
-<div class="line"><span class="lineno">  172</span>            returnJson.add(<span class="stringliteral">&quot;id&quot;</span>, cfe04Id);</div>
-<div class="line"><span class="lineno">  173</span>            returnJson.add(<span class="stringliteral">&quot;message&quot;</span>, ex.getCause().getMessage());</div>
-<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(returnJson.build().toString(), HttpStatus.BAD_REQUEST);</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00138">138</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>      {</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1Cfe04StorageSourcetypeController.html#af0edd7c2979cc80ebf994cc0360302fc">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting cfe 04 storage sourcetype &lt;[{}]&gt;&quot;</span>, cfe04Id);</div>
+<div class="line"><span class="lineno">  143</span>        cfe04StorageSourcetypeMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper.html#a9f8cbe0fc00e2d87462572a2cb80977e">delete</a>(cfe04Id, sourceTypeId);</div>
+<div class="line"><span class="lineno">  144</span>        JsonObjectBuilder returnJson = Json.createObjectBuilder();</div>
+<div class="line"><span class="lineno">  145</span>        returnJson.add(<span class="stringliteral">&quot;id&quot;</span>, cfe04Id);</div>
+<div class="line"><span class="lineno">  146</span>        returnJson.add(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Sourcetype deleted from cfe_04 storage&quot;</span>);</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(returnJson.build().toString(), HttpStatus.OK);</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper_html_a9f8cbe0fc00e2d87462572a2cb80977e"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1Cfe04StorageSourcetypeMapper.html#a9f8cbe0fc00e2d87462572a2cb80977e">com.teragrep.cfe18.Cfe04StorageSourcetypeMapper.delete</a></div><div class="ttdeci">void delete(final int sourcetypeId, final int storageId)</div></div>
 </div><!-- fragment -->
 </div>
@@ -237,7 +210,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00074">74</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html#l00073">73</a> of file <a class="el" href="Cfe04StorageSourcetypeController_8java_source.html">Cfe04StorageSourcetypeController.java</a>.</p>
 
 </div>
 </div>
