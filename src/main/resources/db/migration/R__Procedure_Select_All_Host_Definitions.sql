@@ -43,25 +43,22 @@
  * Teragrep, the applicable Commercial License may apply to this file if you as
  * a licensee so wish it.
  */
-USE cfe_18;
+use cfe_18;
 DELIMITER //
-CREATE OR REPLACE PROCEDURE select_all_host_definitions(tx_id INT)
+CREATE OR REPLACE PROCEDURE remove_flow_storage(proc_flow varchar(255), proc_storage_id int)
 BEGIN
     DECLARE EXIT HANDLER FOR SQLEXCEPTION
         BEGIN
             ROLLBACK;
             RESIGNAL;
         END;
-    IF (tx_id) IS NULL THEN
-        SET @time = (SELECT MAX(transaction_id) FROM mysql.transaction_registry);
-    ELSE
-        SET @time = tx_id;
-    END IF;
-    SELECT h.id        AS host_id,
-           h.md5       AS host_md5,
-           h.fqhost    AS host_fq,
-           h.host_type AS host_type
-    FROM cfe_18.host FOR SYSTEM_TIME AS OF TRANSACTION @time h;
+    START TRANSACTION;
+    select id into @FlowId from cfe_18.flows where name = proc_flow;
+    if (select id from cfe_18.flow_storages where flow_id = @FlowId and storage_id = proc_storage_id) is null then
+        SIGNAL SQLSTATE '45000' set MYSQL_ERRNO = 50000;
+    end if;
+    delete from cfe_18.flow_storages where storage_id = proc_storage_id and flow_id = @FlowId;
+    COMMIT;
 END;
 //
 DELIMITER ;
