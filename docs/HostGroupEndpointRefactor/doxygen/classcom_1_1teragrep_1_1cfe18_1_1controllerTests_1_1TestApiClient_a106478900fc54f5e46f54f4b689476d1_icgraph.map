@@ -1,0 +1,9 @@
+<map id="com.teragrep.cfe18.controllerTests.TestApiClient.insertHostGroup" name="com.teragrep.cfe18.controllerTests.TestApiClient.insertHostGroup">
+<area shape="rect" id="Node000001" title=" " alt="" coords="336,77,591,117"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1GXGControllerTest.html#aaef9ee8f5ca6da182f4c7db49a9cb276" title=" " alt="" coords="5,5,288,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="361,77,287,60,235,48,236,43,289,55,362,72"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1HostGroupsControllerTest.html#a9569b08ebebcf85ce2453fd023e2313e" title=" " alt="" coords="19,70,274,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="322,100,274,100,274,95,322,95"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TagTriggerControllerTest.html#a3dc9db668f79cf78395d20e0b6bc9a72" title=" " alt="" coords="25,149,269,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="369,123,258,151,257,146,368,118"/>
+</map>
