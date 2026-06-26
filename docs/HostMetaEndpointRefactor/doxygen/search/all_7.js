@@ -16,8 +16,10 @@ var searchData=
   ['instant_13',['instant',['../classcom_1_1teragrep_1_1cfe18_1_1requestfilter_1_1Timestamp.html#a054b495d2d5ff1b9b993636b3303183f',1,'com::teragrep::cfe18::requestfilter::Timestamp']]],
   ['integrationtype_14',['IntegrationType',['../enumcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1IntegrationType.html',1,'com::teragrep::cfe18::handlers::entities']]],
   ['integrationtype_2ejava_15',['IntegrationType.java',['../IntegrationType_8java.html',1,'']]],
-  ['ip_16',['ip',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Hub.html#a76f80a59a7583d6157bafa62dc6fb00d',1,'com::teragrep::cfe18::handlers::entities::Hub']]],
-  ['ipaddress_17',['ipAddress',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Sink.html#a18f86a0854c2b35903cadfe3b4e3fdbe',1,'com::teragrep::cfe18::handlers::entities::Sink']]],
-  ['iswritedefault_18',['isWriteDefault',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a91f107588f0cdcfe152eae440fe9cb06',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]],
-  ['iswritemeta_19',['isWriteMeta',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a135d9e1d180d630017870de6341d2ccf',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]]
+  ['integrationtypeconflict_16',['INTEGRATIONTYPECONFLICT',['../enumcom_1_1teragrep_1_1cfe18_1_1MariaDBError.html#a9aa861f3e8079df764be9e40a1e54659',1,'com::teragrep::cfe18::MariaDBError']]],
+  ['inuse_17',['INUSE',['../enumcom_1_1teragrep_1_1cfe18_1_1MariaDBError.html#a5a4c1e397de3a062ca7a8f6f3a6b5a7c',1,'com::teragrep::cfe18::MariaDBError']]],
+  ['ip_18',['ip',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Hub.html#a76f80a59a7583d6157bafa62dc6fb00d',1,'com::teragrep::cfe18::handlers::entities::Hub']]],
+  ['ipaddress_19',['ipAddress',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Sink.html#a18f86a0854c2b35903cadfe3b4e3fdbe',1,'com::teragrep::cfe18::handlers::entities::Sink']]],
+  ['iswritedefault_20',['isWriteDefault',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a91f107588f0cdcfe152eae440fe9cb06',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]],
+  ['iswritemeta_21',['isWriteMeta',['../classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1Cfe04Transform.html#a135d9e1d180d630017870de6341d2ccf',1,'com::teragrep::cfe18::handlers::entities::Cfe04Transform']]]
 ];
