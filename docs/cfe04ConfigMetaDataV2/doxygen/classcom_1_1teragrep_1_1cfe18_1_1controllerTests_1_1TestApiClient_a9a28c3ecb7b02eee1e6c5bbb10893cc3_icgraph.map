@@ -1,15 +1,19 @@
 <map id="com.teragrep.cfe18.controllerTests.TestApiClient.insertFlow" name="com.teragrep.cfe18.controllerTests.TestApiClient.insertFlow">
-<area shape="rect" id="Node000001" title=" " alt="" coords="347,196,563,236"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureMetaControllerTest.html#ad565e69f325693ebed1cd9d94ef86ba6" title=" " alt="" coords="5,5,299,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="430,187,375,121,338,88,297,60,271,48,274,43,300,55,341,83,379,117,434,183"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#aebde495f07889a5f9f93085d0c1cda17" title=" " alt="" coords="29,70,275,125"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="406,191,355,164,298,138,265,127,267,122,300,134,357,159,409,187"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageSourcetypeControllerTest.html#a33789fbbcd2ac3e9aaf01bbc47621218" title=" " alt="" coords="10,149,294,203"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="332,203,294,197,295,192,333,197"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TagTriggerControllerTest.html#a4de673f8ee99ef5accbf0fdb3cfcacb5" title=" " alt="" coords="30,227,274,282"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="333,234,274,242,274,236,333,229"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1ApiUtilityControllerTest.html#af95d613a11484708db570ebe9908f3b6" title=" " alt="" coords="33,306,271,361"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="407,245,356,271,300,296,263,308,261,303,298,291,354,266,405,240"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1ApiUtilityControllerTest.html#a54d9513e054bdf333c3b7246b502b284" title=" " alt="" coords="33,385,271,439"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="433,248,377,312,341,346,300,374,273,388,270,383,297,370,337,342,374,309,429,245"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="348,264,564,304"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1CaptureMetaControllerTest.html#ad565e69f325693ebed1cd9d94ef86ba6" title=" " alt="" coords="6,5,299,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="439,252,418,208,388,155,348,103,324,80,299,60,277,48,280,43,301,55,328,76,352,99,392,152,423,205,444,250"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageIndexControllerTest.html#aebde495f07889a5f9f93085d0c1cda17" title=" " alt="" coords="29,70,276,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="429,255,373,195,338,164,299,138,275,127,277,122,301,134,341,160,377,191,433,251"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1Cfe04StorageSourcetypeControllerTest.html#a33789fbbcd2ac3e9aaf01bbc47621218" title=" " alt="" coords="11,149,295,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="400,261,299,219,260,206,262,201,301,213,402,256"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1StorageIndexControllerTest.html#a113b5f35dc7cba566f0978d284123391" title=" " alt="" coords="5,228,300,268"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="334,272,300,268,301,263,335,267"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1StorageSourcetypeControllerTest.html#a578b0002372563d34fb03ae675add115" title=" " alt="" coords="29,293,276,347"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="334,301,277,308,276,303,334,296"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TagTriggerControllerTest.html#a4de673f8ee99ef5accbf0fdb3cfcacb5" title=" " alt="" coords="31,371,275,426"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="407,313,356,338,301,361,264,374,262,369,299,356,354,333,405,308"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1ApiUtilityControllerTest.html#af95d613a11484708db570ebe9908f3b6" title=" " alt="" coords="33,450,272,505"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="433,317,378,379,341,412,301,440,273,453,271,448,299,435,338,408,374,376,429,313"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1ApiUtilityControllerTest.html#a54d9513e054bdf333c3b7246b502b284" title=" " alt="" coords="33,529,272,583"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="444,318,423,363,392,417,352,472,328,497,302,518,274,534,271,529,298,514,324,493,348,468,388,414,418,361,439,316"/>
 </map>
