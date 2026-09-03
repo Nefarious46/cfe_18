@@ -7,16 +7,8 @@ var searchData=
   ['storage_2ejava_4',['Storage.java',['../Storage_8java.html',1,'']]],
   ['storagecontroller_2ejava_5',['StorageController.java',['../StorageController_8java.html',1,'']]],
   ['storagecontrollertest_2ejava_6',['StorageControllerTest.java',['../StorageControllerTest_8java.html',1,'']]],
-  ['storageindex_2ejava_7',['StorageIndex.java',['../StorageIndex_8java.html',1,'']]],
-  ['storageindexcontroller_2ejava_8',['StorageIndexController.java',['../StorageIndexController_8java.html',1,'']]],
-  ['storageindexcontrollertest_2ejava_9',['StorageIndexControllerTest.java',['../StorageIndexControllerTest_8java.html',1,'']]],
-  ['storageindexmapper_2ejava_10',['StorageIndexMapper.java',['../StorageIndexMapper_8java.html',1,'']]],
-  ['storagemapper_2ejava_11',['StorageMapper.java',['../StorageMapper_8java.html',1,'']]],
-  ['storagesourcetype_2ejava_12',['StorageSourcetype.java',['../StorageSourcetype_8java.html',1,'']]],
-  ['storagesourcetypecontroller_2ejava_13',['StorageSourcetypeController.java',['../StorageSourcetypeController_8java.html',1,'']]],
-  ['storagesourcetypecontrollertest_2ejava_14',['StorageSourcetypeControllerTest.java',['../StorageSourcetypeControllerTest_8java.html',1,'']]],
-  ['storagesourcetypemapper_2ejava_15',['StorageSourcetypeMapper.java',['../StorageSourcetypeMapper_8java.html',1,'']]],
-  ['storagetype_2ejava_16',['StorageType.java',['../StorageType_8java.html',1,'']]],
-  ['subject_2ejava_17',['Subject.java',['../Subject_8java.html',1,'']]],
-  ['swaggerconfiguration_2ejava_18',['SwaggerConfiguration.java',['../SwaggerConfiguration_8java.html',1,'']]]
+  ['storagemapper_2ejava_7',['StorageMapper.java',['../StorageMapper_8java.html',1,'']]],
+  ['storagetype_2ejava_8',['StorageType.java',['../StorageType_8java.html',1,'']]],
+  ['subject_2ejava_9',['Subject.java',['../Subject_8java.html',1,'']]],
+  ['swaggerconfiguration_2ejava_10',['SwaggerConfiguration.java',['../SwaggerConfiguration_8java.html',1,'']]]
 ];
