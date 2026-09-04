@@ -88,10 +88,6 @@ Collaboration diagram for com.teragrep.cfe18.handlers.StorageController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4ffb89b706cf1f088fbec688cc7ef333" id="r_a4ffb89b706cf1f088fbec688cc7ef333"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a4ffb89b706cf1f088fbec688cc7ef333">getStoragesByFlow</a> ( @PathVariable String flow, @RequestParam(required=false) Integer version)</td></tr>
-<tr class="separator:a4ffb89b706cf1f088fbec688cc7ef333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a461018ed25eb6e1ec7e07e91626da7f8" id="r_a461018ed25eb6e1ec7e07e91626da7f8"><td class="memItemLeft" align="right" valign="top">List&lt; FlowStorage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a461018ed25eb6e1ec7e07e91626da7f8">getAllFlowStorages</a> (@RequestParam(required=false) Integer version)</td></tr>
-<tr class="separator:a461018ed25eb6e1ec7e07e91626da7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d188e3b18c73ea7eaf4415140b79b1" id="r_ad8d188e3b18c73ea7eaf4415140b79b1"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#ad8d188e3b18c73ea7eaf4415140b79b1">getStoragesByCaptureID</a> ( @PathVariable int capture_id, @RequestParam(required=false) Integer version)</td></tr>
 <tr class="separator:ad8d188e3b18c73ea7eaf4415140b79b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15154432e2744a14d95549d48b3da0f6" id="r_a15154432e2744a14d95549d48b3da0f6"><td class="memItemLeft" align="right" valign="top">List&lt; CaptureStorage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a15154432e2744a14d95549d48b3da0f6">getAllCaptureStorages</a> (@RequestParam(required=false) Integer version)</td></tr>
@@ -100,16 +96,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0b2614cbab148eead2906848677e06d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4fe380d11634defa89a7949bc7d2b96" id="r_aa4fe380d11634defa89a7949bc7d2b96"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#aa4fe380d11634defa89a7949bc7d2b96">get</a> (@PathVariable(&quot;id&quot;) int id, @RequestParam(required=false) Integer version)</td></tr>
 <tr class="separator:aa4fe380d11634defa89a7949bc7d2b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fab2595014bf919ab5a365fdaae3c61" id="r_a0fab2595014bf919ab5a365fdaae3c61"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a0fab2595014bf919ab5a365fdaae3c61">addNewStorage</a> (@RequestBody FlowStorage newFlowStorage)</td></tr>
-<tr class="separator:a0fab2595014bf919ab5a365fdaae3c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d112bfad03402ab059d72400f442f09" id="r_a4d112bfad03402ab059d72400f442f09"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a4d112bfad03402ab059d72400f442f09">linkStorageToCapture</a> (@RequestBody CaptureStorage newCaptureStorage)</td></tr>
 <tr class="separator:a4d112bfad03402ab059d72400f442f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace773b3cba22c37adf31ef736d95da6c" id="r_ace773b3cba22c37adf31ef736d95da6c"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#ace773b3cba22c37adf31ef736d95da6c">create</a> (@RequestBody Storage newStorage)</td></tr>
 <tr class="separator:ace773b3cba22c37adf31ef736d95da6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac68dbd03b6cb26e2e7adbbdc47b7f026" id="r_ac68dbd03b6cb26e2e7adbbdc47b7f026"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#ac68dbd03b6cb26e2e7adbbdc47b7f026">delete</a> (@PathVariable(&quot;id&quot;) int id)</td></tr>
 <tr class="separator:ac68dbd03b6cb26e2e7adbbdc47b7f026"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08a54211dea97ca9979ee51302f597ce" id="r_a08a54211dea97ca9979ee51302f597ce"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a08a54211dea97ca9979ee51302f597ce">removeFlowStorage</a> (@PathVariable(&quot;flow&quot;) String flow, @PathVariable(&quot;id&quot;) int id)</td></tr>
-<tr class="separator:a08a54211dea97ca9979ee51302f597ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16c5cc858c7f76e8745a46484635e4a9" id="r_a16c5cc858c7f76e8745a46484635e4a9"><td class="memItemLeft" align="right" valign="top">ResponseEntity&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a16c5cc858c7f76e8745a46484635e4a9">removeCaptureStorage</a> ( @PathVariable(&quot;capture_id&quot;) int capture_id, @PathVariable(&quot;storage_id&quot;) int storage_id)</td></tr>
 <tr class="separator:a16c5cc858c7f76e8745a46484635e4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -120,40 +112,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00075">75</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00074">74</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0fab2595014bf919ab5a365fdaae3c61" name="a0fab2595014bf919ab5a365fdaae3c61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fab2595014bf919ab5a365fdaae3c61">&#9670;&#160;</a></span>addNewStorage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResponseEntity&lt; String &gt; com.teragrep.cfe18.handlers.StorageController.addNewStorage </td>
-          <td>(</td>
-          <td class="paramtype">@RequestBody FlowStorage&#160;</td>
-          <td class="paramname"><em>newFlowStorage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00301">301</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  301</span>                                                                                         {</div>
-<div class="line"><span class="lineno">  302</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, newFlowStorage);</div>
-<div class="line"><span class="lineno">  303</span>        FlowStorage fs = storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aef8a4ad90874676bc1880127d8c380f6">addStorageForFlow</a>(newFlowStorage.getFlow(), newFlowStorage.getStorage_id());</div>
-<div class="line"><span class="lineno">  304</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, fs);</div>
-<div class="line"><span class="lineno">  305</span>        JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  306</span>        jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, fs.getId());</div>
-<div class="line"><span class="lineno">  307</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New flow storage created&quot;</span>);</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>    }</div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController_html_a66f225bb65b9ff392fd965505e8a40f0"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">com.teragrep.cfe18.handlers.StorageController.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="StorageController_8java_source.html#l00077">StorageController.java:77</a></div></div>
-<div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_aef8a4ad90874676bc1880127d8c380f6"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aef8a4ad90874676bc1880127d8c380f6">com.teragrep.cfe18.StorageMapper.addStorageForFlow</a></div><div class="ttdeci">FlowStorage addStorageForFlow(String flow, int storage_id)</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="ace773b3cba22c37adf31ef736d95da6c" name="ace773b3cba22c37adf31ef736d95da6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace773b3cba22c37adf31ef736d95da6c">&#9670;&#160;</a></span>create()</h2>
 
@@ -170,18 +130,20 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00380">380</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  380</span>                                                                          {</div>
-<div class="line"><span class="lineno">  381</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, newStorage);</div>
-<div class="line"><span class="lineno">  382</span>        Storage s = storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aaa0dc479ed31f98a6abde4533750d1b5">create</a>(newStorage.getStorageType(), newStorage.getStorageName());</div>
-<div class="line"><span class="lineno">  383</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, s);</div>
-<div class="line"><span class="lineno">  384</span>        JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  385</span>        jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, s.getId());</div>
-<div class="line"><span class="lineno">  386</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New storage created&quot;</span>);</div>
-<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
-<div class="line"><span class="lineno">  388</span> </div>
-<div class="line"><span class="lineno">  389</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_aaa0dc479ed31f98a6abde4533750d1b5"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aaa0dc479ed31f98a6abde4533750d1b5">com.teragrep.cfe18.StorageMapper.create</a></div><div class="ttdeci">Storage create(StorageType storageType, String storageName)</div></div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00275">275</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  275</span>                                                                          {</div>
+<div class="line"><span class="lineno">  276</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, newStorage);</div>
+<div class="line"><span class="lineno">  277</span>        Storage s = storageMapper</div>
+<div class="line"><span class="lineno">  278</span>                .<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a35c7bafafc7e80e8050e449a278b81f4">create</a>(newStorage.getStorageType(), newStorage.getStorageName(), newStorage.getFlowId());</div>
+<div class="line"><span class="lineno">  279</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, s);</div>
+<div class="line"><span class="lineno">  280</span>        JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
+<div class="line"><span class="lineno">  281</span>        jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, s.getId());</div>
+<div class="line"><span class="lineno">  282</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New storage created&quot;</span>);</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController_html_a66f225bb65b9ff392fd965505e8a40f0"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">com.teragrep.cfe18.handlers.StorageController.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="StorageController_8java_source.html#l00076">StorageController.java:76</a></div></div>
+<div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a35c7bafafc7e80e8050e449a278b81f4"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a35c7bafafc7e80e8050e449a278b81f4">com.teragrep.cfe18.StorageMapper.create</a></div><div class="ttdeci">Storage create(StorageType storageType, String storageName, Integer flowId)</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -201,15 +163,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00424">424</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  424</span>                                                                     {</div>
-<div class="line"><span class="lineno">  425</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting Storage &lt;[{}]&gt;&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  426</span>        storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aedeec1075e8bf3144021957815269e1a">delete</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  427</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  428</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  429</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Storage deleted&quot;</span>);</div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  431</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00320">320</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  320</span>                                                                     {</div>
+<div class="line"><span class="lineno">  321</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting Storage &lt;[{}]&gt;&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  322</span>        storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aedeec1075e8bf3144021957815269e1a">delete</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  323</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
+<div class="line"><span class="lineno">  324</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  325</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Storage deleted&quot;</span>);</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
+<div class="line"><span class="lineno">  327</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_aedeec1075e8bf3144021957815269e1a"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aedeec1075e8bf3144021957815269e1a">com.teragrep.cfe18.StorageMapper.delete</a></div><div class="ttdeci">void delete(int id)</div></div>
 </div><!-- fragment -->
 </div>
@@ -240,12 +202,12 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00266">266</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  266</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  267</span>        Storage s = storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#ab74072308760befdff45e81eacda1778">get</a>(<span class="keywordtype">id</span>, version);</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(s, HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00201">201</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                                                                              {</div>
+<div class="line"><span class="lineno">  202</span>        Storage s = storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#ab74072308760befdff45e81eacda1778">get</a>(<span class="keywordtype">id</span>, version);</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(s, HttpStatus.OK);</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_ab74072308760befdff45e81eacda1778"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#ab74072308760befdff45e81eacda1778">com.teragrep.cfe18.StorageMapper.get</a></div><div class="ttdeci">Storage get(int id, Integer version)</div></div>
 </div><!-- fragment -->
 </div>
@@ -266,10 +228,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00236">236</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">return</span> storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a801e27aa53227d97396b0fd7cacd2439">getAll</a>(version);</div>
-<div class="line"><span class="lineno">  238</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00171">171</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                                                 {</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span> storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a801e27aa53227d97396b0fd7cacd2439">getAll</a>(version);</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a801e27aa53227d97396b0fd7cacd2439"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a801e27aa53227d97396b0fd7cacd2439">com.teragrep.cfe18.StorageMapper.getAll</a></div><div class="ttdeci">List&lt; Storage &gt; getAll(Integer version)</div></div>
 </div><!-- fragment -->
 </div>
@@ -290,35 +252,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00211">211</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  211</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">return</span> storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aa04344519bd06bc287d07d1ba76dbf15">getAllCaptureStorage</a>(version);</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00146">146</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aa04344519bd06bc287d07d1ba76dbf15">getAllCaptureStorage</a>(version);</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_aa04344519bd06bc287d07d1ba76dbf15"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#aa04344519bd06bc287d07d1ba76dbf15">com.teragrep.cfe18.StorageMapper.getAllCaptureStorage</a></div><div class="ttdeci">List&lt; CaptureStorage &gt; getAllCaptureStorage(Integer version)</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a461018ed25eb6e1ec7e07e91626da7f8" name="a461018ed25eb6e1ec7e07e91626da7f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a461018ed25eb6e1ec7e07e91626da7f8">&#9670;&#160;</a></span>getAllFlowStorages()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt; FlowStorage &gt; com.teragrep.cfe18.handlers.StorageController.getAllFlowStorages </td>
-          <td>(</td>
-          <td class="paramtype">@RequestParam(required=false) Integer&#160;</td>
-          <td class="paramname"><em>version</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00147">147</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  147</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a011ea1a54ff067be6e9445ffdeef6cc7">getAllFlowStorage</a>(version);</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a011ea1a54ff067be6e9445ffdeef6cc7"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a011ea1a54ff067be6e9445ffdeef6cc7">com.teragrep.cfe18.StorageMapper.getAllFlowStorage</a></div><div class="ttdeci">List&lt; FlowStorage &gt; getAllFlowStorage(Integer version)</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -348,49 +286,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00180">180</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>      {</div>
-<div class="line"><span class="lineno">  184</span>        List&lt;CaptureStorage&gt; cs = storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a58ec95cc7c3aceee315514b167ca0d11">retrieveCaptureStorages</a>(capture_id, version);</div>
-<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(cs, HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00115">115</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>      {</div>
+<div class="line"><span class="lineno">  119</span>        List&lt;CaptureStorage&gt; cs = storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a58ec95cc7c3aceee315514b167ca0d11">retrieveCaptureStorages</a>(capture_id, version);</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(cs, HttpStatus.OK);</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a58ec95cc7c3aceee315514b167ca0d11"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a58ec95cc7c3aceee315514b167ca0d11">com.teragrep.cfe18.StorageMapper.retrieveCaptureStorages</a></div><div class="ttdeci">List&lt; CaptureStorage &gt; retrieveCaptureStorages(int capture_id, Integer version)</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a4ffb89b706cf1f088fbec688cc7ef333" name="a4ffb89b706cf1f088fbec688cc7ef333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ffb89b706cf1f088fbec688cc7ef333">&#9670;&#160;</a></span>getStoragesByFlow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResponseEntity&lt;?&gt; com.teragrep.cfe18.handlers.StorageController.getStoragesByFlow </td>
-          <td>(</td>
-          <td class="paramtype">@PathVariable String&#160;</td>
-          <td class="paramname"><em>flow</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">@RequestParam(required=false) Integer&#160;</td>
-          <td class="paramname"><em>version</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00116">116</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>      {</div>
-<div class="line"><span class="lineno">  120</span>        List&lt;FlowStorage&gt; fs = storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a41a371a8dd6967c359595b5d36152ae5">retrieveFlowStorages</a>(flow, version);</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(fs, HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a41a371a8dd6967c359595b5d36152ae5"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a41a371a8dd6967c359595b5d36152ae5">com.teragrep.cfe18.StorageMapper.retrieveFlowStorages</a></div><div class="ttdeci">List&lt; FlowStorage &gt; retrieveFlowStorages(String flow, Integer version)</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -410,17 +312,17 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00341">341</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  341</span>                                                                                                      {</div>
-<div class="line"><span class="lineno">  342</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, newCaptureStorage);</div>
-<div class="line"><span class="lineno">  343</span>        CaptureStorage cs = storageMapper</div>
-<div class="line"><span class="lineno">  344</span>                .<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a7dbf9429c3e2a1444603258c6844232d">addStorageForCapture</a>(newCaptureStorage.getCapture_id(), newCaptureStorage.getStorage_id());</div>
-<div class="line"><span class="lineno">  345</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, cs);</div>
-<div class="line"><span class="lineno">  346</span>        JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  347</span>        jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, cs.getCapture_id());</div>
-<div class="line"><span class="lineno">  348</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New capture storage created&quot;</span>);</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00236">236</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>                                                                                                      {</div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;About to insert &lt;[{}]&gt;&quot;</span>, newCaptureStorage);</div>
+<div class="line"><span class="lineno">  238</span>        CaptureStorage cs = storageMapper</div>
+<div class="line"><span class="lineno">  239</span>                .<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a7dbf9429c3e2a1444603258c6844232d">addStorageForCapture</a>(newCaptureStorage.getCapture_id(), newCaptureStorage.getStorage_id());</div>
+<div class="line"><span class="lineno">  240</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, cs);</div>
+<div class="line"><span class="lineno">  241</span>        JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
+<div class="line"><span class="lineno">  242</span>        jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, cs.getCapture_id());</div>
+<div class="line"><span class="lineno">  243</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New capture storage created&quot;</span>);</div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
+<div class="line"><span class="lineno">  245</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a7dbf9429c3e2a1444603258c6844232d"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a7dbf9429c3e2a1444603258c6844232d">com.teragrep.cfe18.StorageMapper.addStorageForCapture</a></div><div class="ttdeci">CaptureStorage addStorageForCapture(int capture_id, int storage_id)</div></div>
 </div><!-- fragment -->
 </div>
@@ -451,55 +353,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00500">500</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  503</span>      {</div>
-<div class="line"><span class="lineno">  504</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting capture storage with id &lt;[{}]&gt;&quot;</span>, storage_id);</div>
-<div class="line"><span class="lineno">  505</span>        storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a09d009bf5474b5cdc04eece236688b64">deleteCaptureStorage</a>(capture_id, storage_id);</div>
-<div class="line"><span class="lineno">  506</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  507</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, capture_id);</div>
-<div class="line"><span class="lineno">  508</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Capture = &quot;</span> + capture_id + <span class="stringliteral">&quot;, with Storage &quot;</span> + storage_id + <span class="stringliteral">&quot; deleted.&quot;</span>);</div>
-<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  510</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00358">358</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  361</span>      {</div>
+<div class="line"><span class="lineno">  362</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting capture storage with id &lt;[{}]&gt;&quot;</span>, storage_id);</div>
+<div class="line"><span class="lineno">  363</span>        storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a09d009bf5474b5cdc04eece236688b64">deleteCaptureStorage</a>(capture_id, storage_id);</div>
+<div class="line"><span class="lineno">  364</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
+<div class="line"><span class="lineno">  365</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, capture_id);</div>
+<div class="line"><span class="lineno">  366</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Capture = &quot;</span> + capture_id + <span class="stringliteral">&quot;, with Storage &quot;</span> + storage_id + <span class="stringliteral">&quot; deleted.&quot;</span>);</div>
+<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
+<div class="line"><span class="lineno">  368</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a09d009bf5474b5cdc04eece236688b64"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a09d009bf5474b5cdc04eece236688b64">com.teragrep.cfe18.StorageMapper.deleteCaptureStorage</a></div><div class="ttdeci">CaptureStorage deleteCaptureStorage(int capture_id, int storage_id)</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a08a54211dea97ca9979ee51302f597ce" name="a08a54211dea97ca9979ee51302f597ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08a54211dea97ca9979ee51302f597ce">&#9670;&#160;</a></span>removeFlowStorage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResponseEntity&lt; String &gt; com.teragrep.cfe18.handlers.StorageController.removeFlowStorage </td>
-          <td>(</td>
-          <td class="paramtype">@PathVariable(&quot;flow&quot;) String&#160;</td>
-          <td class="paramname"><em>flow</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">@PathVariable(&quot;id&quot;) int&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00462">462</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  462</span>                                                                                                                   {</div>
-<div class="line"><span class="lineno">  463</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1StorageController.html#a66f225bb65b9ff392fd965505e8a40f0">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting flow Storage with id &lt;[{}]&gt;&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  464</span>        storageMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a4c5485afff81dbeadeff0cec9a054f3e">deleteFlowStorage</a>(flow, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  465</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  466</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  467</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Flow =&quot;</span> + flow + <span class="stringliteral">&quot;, Storage &quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot; deleted.&quot;</span>);</div>
-<div class="line"><span class="lineno">  468</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  469</span>    }</div>
-<div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper_html_a4c5485afff81dbeadeff0cec9a054f3e"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1StorageMapper.html#a4c5485afff81dbeadeff0cec9a054f3e">com.teragrep.cfe18.StorageMapper.deleteFlowStorage</a></div><div class="ttdeci">FlowStorage deleteFlowStorage(String flow, int id)</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -524,7 +387,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00077">77</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StorageController_8java_source.html#l00076">76</a> of file <a class="el" href="StorageController_8java_source.html">StorageController.java</a>.</p>
 
 </div>
 </div>
