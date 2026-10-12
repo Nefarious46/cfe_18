@@ -379,7 +379,8 @@ public class StorageController {
     })
     public ResponseEntity<String> create(@RequestBody Storage newStorage) {
         LOGGER.info("About to insert <[{}]>", newStorage);
-        Storage s = storageMapper.create(newStorage.getStorageType(), newStorage.getStorageName());
+        Storage s = storageMapper
+                .create(newStorage.getStorageType(), newStorage.getStorageName(), newStorage.getFlowId());
         LOGGER.debug("Values returned <[{}]>", s);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("id", s.getId());

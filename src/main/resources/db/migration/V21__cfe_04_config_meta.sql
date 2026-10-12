@@ -149,8 +149,8 @@ CREATE TABLE cfe_04_global
     end_trxid         BIGINT UNSIGNED GENERATED ALWAYS AS ROW END INVISIBLE,
     PERIOD FOR SYSTEM_TIME(start_trxid, end_trxid)
 ) WITH SYSTEM VERSIONING;
-use cfe_18;
-CREATE TABLE flow.capture_def_x_flow_storages
+
+CREATE TABLE capture_def_x_flow_storages
 (
     id              INT PRIMARY KEY AUTO_INCREMENT,
     capture_def_id  INT NOT NULL,
