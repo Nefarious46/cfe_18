@@ -70,11 +70,18 @@ import java.util.Arrays;
 @EnableMethodSecurity
 public class OAuth2ResourceServer {
 
+    private final RequestLoggingFilter requestLoggingFilter;
+
     @Value("${public.key.write}")
     RSAPublicKey writeKey;
 
     @Value("${public.key.read}")
     RSAPublicKey readKey;
+
+    public OAuth2ResourceServer(){
+        this.requestLoggingFilter = new RequestLoggingFilter();
+    }
+
 
     /** Decodes public keys and assigns SimpleGrantedAuthority value depending on key used. Authority is used in SecurityFilterChain to match HttpMethod with given token
      *
