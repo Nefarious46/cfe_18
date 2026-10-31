@@ -1,7 +1,9 @@
 <map id="com.teragrep.cfe18.controllerTests.TestApiClient.insertRelpHost" name="com.teragrep.cfe18.controllerTests.TestApiClient.insertRelpHost">
-<area shape="rect" id="Node000001" title=" " alt="" coords="297,53,541,93"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1HostMetaControllerTest.html#a5e7f6f9ee73c1ae8907afa9069f89687" title=" " alt="" coords="7,5,248,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,57,248,52,249,47,284,51"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TagTriggerControllerTest.html#a4de673f8ee99ef5accbf0fdb3cfcacb5" title=" " alt="" coords="5,84,249,139"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,93,250,98,249,93,283,88"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="324,91,568,131"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1HostMetaControllerTest.html#a5e7f6f9ee73c1ae8907afa9069f89687" title=" " alt="" coords="20,5,261,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,90,247,63,248,58,355,85"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1HostDefinitionControllerTest.html#a37dc9172d43ce43a2f2af45723a96533" title=" " alt="" coords="5,84,276,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="310,114,276,114,276,109,310,109"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1teragrep_1_1cfe18_1_1controllerTests_1_1TagTriggerControllerTest.html#a4de673f8ee99ef5accbf0fdb3cfcacb5" title=" " alt="" coords="19,163,263,217"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="355,137,248,165,247,160,354,132"/>
 </map>

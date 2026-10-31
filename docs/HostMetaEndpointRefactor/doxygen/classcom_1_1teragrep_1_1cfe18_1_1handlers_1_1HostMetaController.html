@@ -139,9 +139,10 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1HostMetaController.html#aa4886e8d54a8b032105862fac45eb19d">LOGGER</a>.debug(<span class="stringliteral">&quot;Values returned &lt;[{}]&gt;&quot;</span>, hm);</div>
 <div class="line"><span class="lineno">  114</span>        JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</div>
 <div class="line"><span class="lineno">  115</span>        jsonObject.put(<span class="stringliteral">&quot;id&quot;</span>, hm.getHostId());</div>
-<div class="line"><span class="lineno">  116</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New host meta added&quot;</span>);</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="line"><span class="lineno">  116</span>        jsonObject.put(<span class="stringliteral">&quot;keyId&quot;</span>, hm.getMetaKeyId());</div>
+<div class="line"><span class="lineno">  117</span>        jsonObject.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;New host meta added&quot;</span>);</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(jsonObject.toString(), HttpStatus.CREATED);</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1HostMetaController_html_aa4886e8d54a8b032105862fac45eb19d"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1HostMetaController.html#aa4886e8d54a8b032105862fac45eb19d">com.teragrep.cfe18.handlers.HostMetaController.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="HostMetaController_8java_source.html#l00074">HostMetaController.java:74</a></div></div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper_html_a7a7f39c45b75a346906b255b121b6739"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper.html#a7a7f39c45b75a346906b255b121b6739">com.teragrep.cfe18.HostMetaMapper.create</a></div><div class="ttdeci">HostMeta create(final Integer hostId, final String key, final String hostMetaValue)</div></div>
 </div><!-- fragment -->
@@ -173,15 +174,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HostMetaController_8java_source.html#l00172">172</a> of file <a class="el" href="HostMetaController_8java_source.html">HostMetaController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>      {</div>
-<div class="line"><span class="lineno">  176</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1HostMetaController.html#aa4886e8d54a8b032105862fac45eb19d">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting Hostmeta &lt;[{}]&gt;&quot;</span>, hostId);</div>
-<div class="line"><span class="lineno">  177</span>        hostMetaMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper.html#a5966174607357b87b0d319782db4b9c7">delete</a>(hostId, key);</div>
-<div class="line"><span class="lineno">  178</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
-<div class="line"><span class="lineno">  179</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, hostId);</div>
-<div class="line"><span class="lineno">  180</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Hostmeta deleted.&quot;</span>);</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="HostMetaController_8java_source.html#l00173">173</a> of file <a class="el" href="HostMetaController_8java_source.html">HostMetaController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>      {</div>
+<div class="line"><span class="lineno">  177</span>        <a class="code hl_variable" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1HostMetaController.html#aa4886e8d54a8b032105862fac45eb19d">LOGGER</a>.info(<span class="stringliteral">&quot;Deleting Hostmeta &lt;[{}]&gt;&quot;</span>, hostId);</div>
+<div class="line"><span class="lineno">  178</span>        hostMetaMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper.html#a5966174607357b87b0d319782db4b9c7">delete</a>(hostId, key);</div>
+<div class="line"><span class="lineno">  179</span>        JSONObject j = <span class="keyword">new</span> JSONObject();</div>
+<div class="line"><span class="lineno">  180</span>        j.put(<span class="stringliteral">&quot;id&quot;</span>, hostId);</div>
+<div class="line"><span class="lineno">  181</span>        j.put(<span class="stringliteral">&quot;message&quot;</span>, <span class="stringliteral">&quot;Hostmeta deleted.&quot;</span>);</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(j.toString(), HttpStatus.OK);</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper_html_a5966174607357b87b0d319782db4b9c7"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper.html#a5966174607357b87b0d319782db4b9c7">com.teragrep.cfe18.HostMetaMapper.delete</a></div><div class="ttdeci">void delete(final Integer id, final String key)</div></div>
 </div><!-- fragment -->
 </div>
@@ -218,10 +219,10 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HostMetaController_8java_source.html#l00141">141</a> of file <a class="el" href="HostMetaController_8java_source.html">HostMetaController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>      {</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> hostMetaMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper.html#a48f5aecab07af05ea19b3114846f940e">get</a>(hostId, key, version);</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="HostMetaController_8java_source.html#l00142">142</a> of file <a class="el" href="HostMetaController_8java_source.html">HostMetaController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>      {</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">return</span> hostMetaMapper.<a class="code hl_function" href="interfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper.html#a48f5aecab07af05ea19b3114846f940e">get</a>(hostId, key, version);</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
 <div class="ttc" id="ainterfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper_html_a48f5aecab07af05ea19b3114846f940e"><div class="ttname"><a href="interfacecom_1_1teragrep_1_1cfe18_1_1HostMetaMapper.html#a48f5aecab07af05ea19b3114846f940e">com.teragrep.cfe18.HostMetaMapper.get</a></div><div class="ttdeci">List&lt; HostMeta &gt; get(final Integer hostMetaId, final String key, final Integer version)</div></div>
 </div><!-- fragment -->
 </div>

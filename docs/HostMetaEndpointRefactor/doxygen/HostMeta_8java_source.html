@@ -137,61 +137,77 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    @Schema(accessMode = Schema.AccessMode.READ_ONLY)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#af9486d49e9a33b72ae6bb5edb673b3a1">   55</a></span>    private <span class="keywordtype">int</span> hostId;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a4635b563ff2002d2c89ff33288e15c20">   56</a></span>    private String metaKey;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a863e46a662dcf72cd81a8f360c954de8">   57</a></span>    private String metaValue;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a66b31af8841e5f6bd6e0b248c455110b">   59</a></span>    public <span class="keywordtype">int</span> getHostId() {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span> hostId;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    @Schema(accessMode = Schema.AccessMode.READ_ONLY)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a806cac5ca836b3543eed29283e8b450d">   57</a></span>    private <span class="keywordtype">int</span> metaKeyId;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a4635b563ff2002d2c89ff33288e15c20">   58</a></span>    private String metaKey;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a863e46a662dcf72cd81a8f360c954de8">   59</a></span>    private String metaValue;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a66b31af8841e5f6bd6e0b248c455110b">   61</a></span>    public <span class="keywordtype">int</span> getHostId() {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> hostId;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#af9211363d937b7dd533576d23bbf5342">   63</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#af9211363d937b7dd533576d23bbf5342">setHostId</a>(<span class="keywordtype">int</span> hostId) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        this.hostId = hostId;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#af9211363d937b7dd533576d23bbf5342">   65</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#af9211363d937b7dd533576d23bbf5342">setHostId</a>(<span class="keywordtype">int</span> hostId) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        this.hostId = hostId;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aa520269ce236fab00c07dc7c9ec34e6c">   67</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aa520269ce236fab00c07dc7c9ec34e6c">getMetaKey</a>() {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> metaKey;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aece10c381fbfe351007926a64fb247ab">   69</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aece10c381fbfe351007926a64fb247ab">getMetaKeyId</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> metaKeyId;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2eb499a3b84519eaee700df3d51ff7e7">   71</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2eb499a3b84519eaee700df3d51ff7e7">setMetaKey</a>(String metaKey) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        this.metaKey = metaKey;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#ae1c57e307d04cb13fd9de6f067e6e73a">   73</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#ae1c57e307d04cb13fd9de6f067e6e73a">setMetaKeyId</a>(<span class="keywordtype">int</span> metaKeyId) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        this.metaKeyId = metaKeyId;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
 </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#abc3b859edceee3384a0fe20f7a311c20">   75</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#abc3b859edceee3384a0fe20f7a311c20">getMetaValue</a>() {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> metaValue;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aa520269ce236fab00c07dc7c9ec34e6c">   77</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aa520269ce236fab00c07dc7c9ec34e6c">getMetaKey</a>() {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> metaKey;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e7dc47057321070141ff4cab53a3199">   79</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e7dc47057321070141ff4cab53a3199">setMetaValue</a>(String metaValue) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        this.metaValue = metaValue;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2eb499a3b84519eaee700df3d51ff7e7">   81</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2eb499a3b84519eaee700df3d51ff7e7">setMetaKey</a>(String metaKey) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        this.metaKey = metaKey;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
 </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    @Override</div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e3bd09d8fc56f7b146348c6a56e59b6">   84</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e3bd09d8fc56f7b146348c6a56e59b6">toString</a>() {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;HostMeta{&quot;</span> + <span class="stringliteral">&quot;hostId=&quot;</span> + hostId + <span class="stringliteral">&quot;, metaKey=&#39;&quot;</span> + metaKey + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="stringliteral">&quot;, metaValue=&#39;&quot;</span> + metaValue + <span class="charliteral">&#39;\&#39;&#39;</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                + <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#abc3b859edceee3384a0fe20f7a311c20">   85</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#abc3b859edceee3384a0fe20f7a311c20">getMetaValue</a>() {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> metaValue;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e7dc47057321070141ff4cab53a3199">   89</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e7dc47057321070141ff4cab53a3199">setMetaValue</a>(String metaValue) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        this.metaValue = metaValue;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    @Override</div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e3bd09d8fc56f7b146348c6a56e59b6">   94</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e3bd09d8fc56f7b146348c6a56e59b6">toString</a>() {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;HostMeta{&quot;</span> + <span class="stringliteral">&quot;hostId=&quot;</span> + hostId + <span class="stringliteral">&quot;, metaKeyId=&quot;</span> + metaKeyId + <span class="stringliteral">&quot;, metaKey=&#39;&quot;</span> + metaKey + <span class="charliteral">&#39;\&#39;&#39;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                + <span class="stringliteral">&quot;, metaValue=&#39;&quot;</span> + metaValue + <span class="charliteral">&#39;\&#39;&#39;</span> + <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
 </div>
 <div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html">com.teragrep.cfe18.handlers.entities.HostMeta</a></div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00052">HostMeta.java:52</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_a2e3bd09d8fc56f7b146348c6a56e59b6"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e3bd09d8fc56f7b146348c6a56e59b6">com.teragrep.cfe18.handlers.entities.HostMeta.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00084">HostMeta.java:84</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_a2e7dc47057321070141ff4cab53a3199"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e7dc47057321070141ff4cab53a3199">com.teragrep.cfe18.handlers.entities.HostMeta.setMetaValue</a></div><div class="ttdeci">void setMetaValue(String metaValue)</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00079">HostMeta.java:79</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_a2eb499a3b84519eaee700df3d51ff7e7"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2eb499a3b84519eaee700df3d51ff7e7">com.teragrep.cfe18.handlers.entities.HostMeta.setMetaKey</a></div><div class="ttdeci">void setMetaKey(String metaKey)</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00071">HostMeta.java:71</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_aa520269ce236fab00c07dc7c9ec34e6c"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aa520269ce236fab00c07dc7c9ec34e6c">com.teragrep.cfe18.handlers.entities.HostMeta.getMetaKey</a></div><div class="ttdeci">String getMetaKey()</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00067">HostMeta.java:67</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_abc3b859edceee3384a0fe20f7a311c20"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#abc3b859edceee3384a0fe20f7a311c20">com.teragrep.cfe18.handlers.entities.HostMeta.getMetaValue</a></div><div class="ttdeci">String getMetaValue()</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00075">HostMeta.java:75</a></div></div>
-<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_af9211363d937b7dd533576d23bbf5342"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#af9211363d937b7dd533576d23bbf5342">com.teragrep.cfe18.handlers.entities.HostMeta.setHostId</a></div><div class="ttdeci">void setHostId(int hostId)</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00063">HostMeta.java:63</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_a2e3bd09d8fc56f7b146348c6a56e59b6"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e3bd09d8fc56f7b146348c6a56e59b6">com.teragrep.cfe18.handlers.entities.HostMeta.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00094">HostMeta.java:94</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_a2e7dc47057321070141ff4cab53a3199"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2e7dc47057321070141ff4cab53a3199">com.teragrep.cfe18.handlers.entities.HostMeta.setMetaValue</a></div><div class="ttdeci">void setMetaValue(String metaValue)</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00089">HostMeta.java:89</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_a2eb499a3b84519eaee700df3d51ff7e7"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#a2eb499a3b84519eaee700df3d51ff7e7">com.teragrep.cfe18.handlers.entities.HostMeta.setMetaKey</a></div><div class="ttdeci">void setMetaKey(String metaKey)</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00081">HostMeta.java:81</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_aa520269ce236fab00c07dc7c9ec34e6c"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aa520269ce236fab00c07dc7c9ec34e6c">com.teragrep.cfe18.handlers.entities.HostMeta.getMetaKey</a></div><div class="ttdeci">String getMetaKey()</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00077">HostMeta.java:77</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_abc3b859edceee3384a0fe20f7a311c20"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#abc3b859edceee3384a0fe20f7a311c20">com.teragrep.cfe18.handlers.entities.HostMeta.getMetaValue</a></div><div class="ttdeci">String getMetaValue()</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00085">HostMeta.java:85</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_ae1c57e307d04cb13fd9de6f067e6e73a"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#ae1c57e307d04cb13fd9de6f067e6e73a">com.teragrep.cfe18.handlers.entities.HostMeta.setMetaKeyId</a></div><div class="ttdeci">void setMetaKeyId(int metaKeyId)</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00073">HostMeta.java:73</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_aece10c381fbfe351007926a64fb247ab"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#aece10c381fbfe351007926a64fb247ab">com.teragrep.cfe18.handlers.entities.HostMeta.getMetaKeyId</a></div><div class="ttdeci">int getMetaKeyId()</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00069">HostMeta.java:69</a></div></div>
+<div class="ttc" id="aclasscom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta_html_af9211363d937b7dd533576d23bbf5342"><div class="ttname"><a href="classcom_1_1teragrep_1_1cfe18_1_1handlers_1_1entities_1_1HostMeta.html#af9211363d937b7dd533576d23bbf5342">com.teragrep.cfe18.handlers.entities.HostMeta.setHostId</a></div><div class="ttdeci">void setHostId(int hostId)</div><div class="ttdef"><b>Definition</b> <a href="HostMeta_8java_source.html#l00065">HostMeta.java:65</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
